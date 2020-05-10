@@ -1,0 +1,3 @@
+#Instruction: request and download the LFS 2019 and 2020 (January-April) data from Statistics Canada (Stata version), and save in this folder
+
+Link: https://www.statcan.gc.ca/eng/survey/household/3701

@@ -1,0 +1,500 @@
+﻿NOC6_2 digit,NOC16_4 digit,Introspection 1,Introspection 2
+    01 Management occupations,        0011 Legislators,1,1
+    01 Management occupations,        0012 Senior government managers and officials,1,1
+    01 Management occupations,"        0013 Senior managers - financial, communications and other business services",1,1
+    01 Management occupations,"        0014 Senior managers - health, education, social and community services and membership organizations",1,1
+    01 Management occupations,"        0015 Senior managers - trade, broadcasting and other services, n.e.c.",1,1
+    01 Management occupations,"        0016 Senior managers - construction, transportation, production and utilities",1,0.5
+    02-05 Specialized middle management occupations,        0111 Financial managers,1,1
+    02-05 Specialized middle management occupations,        0112 Human resources managers,1,1
+    02-05 Specialized middle management occupations,        0113 Purchasing managers,0.5,1
+    02-05 Specialized middle management occupations,        0114 Other administrative services managers,1,1
+    02-05 Specialized middle management occupations,"        0121 Insurance, real estate and financial brokerage managers",1,1
+    02-05 Specialized middle management occupations,"        0122 Banking, credit and other investment managers",1,1
+    02-05 Specialized middle management occupations,"        0124 Advertising, marketing and public relations managers",0.5,1
+    02-05 Specialized middle management occupations,        0125 Other business services managers,1,1
+    02-05 Specialized middle management occupations,        0131 Telecommunication carriers managers,0.5,1
+    02-05 Specialized middle management occupations,        0132 Postal and courier services managers,1,1
+    02-05 Specialized middle management occupations,        0211 Engineering managers,1,0.5
+    02-05 Specialized middle management occupations,        0212 Architecture and science managers,1,0.5
+    02-05 Specialized middle management occupations,        0213 Computer and information systems managers,0.5,1
+    02-05 Specialized middle management occupations,        0311 Managers in health care,1,0.5
+    02-05 Specialized middle management occupations,        0411 Government managers - health and social policy development and program administration,1,1
+    02-05 Specialized middle management occupations,"        0412 Government managers - economic analysis, policy development and program administration",1,1
+    02-05 Specialized middle management occupations,        0413 Government managers - education policy development and program administration,1,1
+    02-05 Specialized middle management occupations,        0414 Other managers in public administration,1,1
+    02-05 Specialized middle management occupations,        0421 Administrators - post-secondary education and vocational training,1,1
+    02-05 Specialized middle management occupations,        0422 School principals and administrators of elementary and secondary education,1,1
+    02-05 Specialized middle management occupations,"        0423 Managers in social, community and correctional services",1,1
+    02-05 Specialized middle management occupations,"        0511 Library, archive, museum and art gallery managers",1,1
+    02-05 Specialized middle management occupations,"        0512 Managers - publishing, motion pictures, broadcasting and performing arts",0.5,1
+    02-05 Specialized middle management occupations,"        0513 Recreation, sports and fitness program and service directors",0.5,0.5
+    06 Middle management occupations in retail and wholesale trade and customer services,        0601 Corporate sales managers,0.5,1
+    06 Middle management occupations in retail and wholesale trade and customer services,        0621 Retail and wholesale trade managers,0.5,1
+    06 Middle management occupations in retail and wholesale trade and customer services,        0631 Restaurant and food service managers,0.5,0.5
+    06 Middle management occupations in retail and wholesale trade and customer services,        0632 Accommodation service managers,0.5,0
+    06 Middle management occupations in retail and wholesale trade and customer services,"        0651 Managers in customer and personal services, n.e.c.",0.5,1
+"    07-09 Middle management occupations in trades, transportation, production and utilities",        0731 Managers in transportation,1,0.5
+"    07-09 Middle management occupations in trades, transportation, production and utilities",        0811 Managers in natural resources production and fishing,0.5,1
+    11 Professional occupations in business and finance,        1111 Financial auditors and accountants,1,1
+    11 Professional occupations in business and finance,        1112 Financial and investment analysts,1,1
+    11 Professional occupations in business and finance,"        1113 Securities agents, investment dealers and brokers",1,1
+    11 Professional occupations in business and finance,        1114 Other financial officers,1,1
+    11 Professional occupations in business and finance,        1121 Human resources professionals,1,1
+    11 Professional occupations in business and finance,        1122 Professional occupations in business management consulting,1,1
+    11 Professional occupations in business and finance,"        1123 Professional occupations in advertising, marketing and public relations",1,1
+    12 Administrative and financial supervisors and administrative occupations,"        1211 Supervisors, general office and administrative support workers",0.5,0.5
+    12 Administrative and financial supervisors and administrative occupations,"        1212 Supervisors, finance and insurance office workers",1,1
+    12 Administrative and financial supervisors and administrative occupations,"        1213 Supervisors, library, correspondence and related information workers",1,1
+    12 Administrative and financial supervisors and administrative occupations,"        1214 Supervisors, mail and message distribution occupations",0.5,1
+    12 Administrative and financial supervisors and administrative occupations,"        1215 Supervisors, supply chain, tracking and scheduling co-ordination occupations",0.5,1
+    12 Administrative and financial supervisors and administrative occupations,        1221 Administrative officers,1,1
+    12 Administrative and financial supervisors and administrative occupations,        1222 Executive assistants,1,1
+    12 Administrative and financial supervisors and administrative occupations,        1223 Human resources and recruitment officers,1,1
+    12 Administrative and financial supervisors and administrative occupations,        1224 Property administrators,1,0.5
+    12 Administrative and financial supervisors and administrative occupations,        1225 Purchasing agents and officers,0.5,1
+    12 Administrative and financial supervisors and administrative occupations,        1226 Conference and event planners,0,1
+    12 Administrative and financial supervisors and administrative occupations,        1227 Court officers and justices of the peace,0,1
+    12 Administrative and financial supervisors and administrative occupations,"        1228 Employment insurance, immigration, border services and revenue officers",1,1
+    12 Administrative and financial supervisors and administrative occupations,        1241 Administrative assistants,1,1
+    12 Administrative and financial supervisors and administrative occupations,        1242 Legal administrative assistants,1,1
+    12 Administrative and financial supervisors and administrative occupations,        1243 Medical administrative assistants,0,0
+    12 Administrative and financial supervisors and administrative occupations,"        1251 Court reporters, medical transcriptionists and related occupations",0,0.5
+    12 Administrative and financial supervisors and administrative occupations,        1252 Health information management occupations,1,0.5
+    12 Administrative and financial supervisors and administrative occupations,        1253 Records management technicians,0.5,0.5
+    12 Administrative and financial supervisors and administrative occupations,        1254 Statistical officers and related research support occupations,1,1
+"    13 Finance, insurance and related business administrative occupations",        1311 Accounting technicians and bookkeepers,1,1
+"    13 Finance, insurance and related business administrative occupations",        1312 Insurance adjusters and claims examiners,0,1
+"    13 Finance, insurance and related business administrative occupations",        1313 Insurance underwriters,1,1
+"    13 Finance, insurance and related business administrative occupations","        1314 Assessors, valuators and appraisers",0.5,1
+"    13 Finance, insurance and related business administrative occupations","        1315 Customs, ship and other brokers",0.5,1
+    14 Office support occupations,        1415 Personnel clerks,0.5,0
+    14 Office support occupations,        1416 Court clerks,0.5,0
+    14 Office support occupations,        1422 Data entry clerks,1,1
+    14 Office support occupations,        1423 Desktop publishing operators and related occupations,1,1
+    14 Office support occupations,        1431 Accounting and related clerks,1,1
+    14 Office support occupations,        1432 Payroll administrators,1,1
+    14 Office support occupations,"        1434 Banking, insurance and other financial clerks",1,1
+    14 Office support occupations,        1435 Collectors,0.5,0
+    14 Office support occupations,        1451 Library assistants and clerks,0,0
+    14 Office support occupations,"        1452 Correspondence, publication and regulatory clerks",0.5,1
+    14 Office support occupations,        1454 Survey interviewers and statistical clerks,1,0.5
+"    15 Distribution, tracking and scheduling co-ordination occupations",        1525 Dispatchers,0.5,0
+"    15 Distribution, tracking and scheduling co-ordination occupations",        1526 Transportation route and crew schedulers,1,1
+    21 Professional occupations in natural and applied sciences,        2111 Physicists and astronomers,0.5,1
+    21 Professional occupations in natural and applied sciences,        2113 Geoscientists and oceanographers,0.5,1
+    21 Professional occupations in natural and applied sciences,        2114 Meteorologists and climatologists,0.5,1
+    21 Professional occupations in natural and applied sciences,        2115 Other professional occupations in physical sciences,1,1
+    21 Professional occupations in natural and applied sciences,        2121 Biologists and related scientists,1,1
+    21 Professional occupations in natural and applied sciences,        2122 Forestry professionals,0.5,0.5
+    21 Professional occupations in natural and applied sciences,"        2123 Agricultural representatives, consultants and specialists",1,0
+    21 Professional occupations in natural and applied sciences,        2131 Civil engineers,1,0.5
+    21 Professional occupations in natural and applied sciences,        2133 Electrical and electronics engineers,0.5,1
+    21 Professional occupations in natural and applied sciences,        2134 Chemical engineers,0.5,0.5
+    21 Professional occupations in natural and applied sciences,        2146 Aerospace engineers,0.5,0
+    21 Professional occupations in natural and applied sciences,        2147 Computer engineers (except software engineers and designers),1,1
+    21 Professional occupations in natural and applied sciences,"        2148 Other professional engineers, n.e.c.",1,1
+    21 Professional occupations in natural and applied sciences,        2151 Architects,1,0.5
+    21 Professional occupations in natural and applied sciences,        2152 Landscape architects,0.5,0.5
+    21 Professional occupations in natural and applied sciences,        2153 Urban and land use planners,1,1
+    21 Professional occupations in natural and applied sciences,"        2161 Mathematicians, statisticians and actuaries",1,1
+    21 Professional occupations in natural and applied sciences,        2171 Information systems analysts and consultants,1,1
+    21 Professional occupations in natural and applied sciences,        2172 Database analysts and data administrators,1,1
+    21 Professional occupations in natural and applied sciences,        2173 Software engineers and designers,1,1
+    21 Professional occupations in natural and applied sciences,        2174 Computer programmers and interactive media developers,1,1
+    21 Professional occupations in natural and applied sciences,        2175 Web designers and developers,1,1
+    22 Technical occupations related to natural and applied sciences,        2225 Landscape and horticulture technicians and specialists,0.5,0.5
+    22 Technical occupations related to natural and applied sciences,        2231 Civil engineering technologists and technicians,1,0.5
+    22 Technical occupations related to natural and applied sciences,        2234 Construction estimators,0.5,0.5
+    22 Technical occupations related to natural and applied sciences,        2251 Architectural technologists and technicians,0.5,0.5
+    22 Technical occupations related to natural and applied sciences,        2252 Industrial designers,0.5,1
+    22 Technical occupations related to natural and applied sciences,        2253 Drafting technologists and technicians,1,1
+    22 Technical occupations related to natural and applied sciences,        2254 Land survey technologists and technicians,0.5,1
+    22 Technical occupations related to natural and applied sciences,        2255 Technical occupations in geomatics and meteorology,0.5,1
+    22 Technical occupations related to natural and applied sciences,        2272 Air traffic controllers and related occupations,0,0
+    22 Technical occupations related to natural and applied sciences,        2281 Computer network technicians,0.5,1
+    22 Technical occupations related to natural and applied sciences,        2282 User support technicians,0.5,1
+    22 Technical occupations related to natural and applied sciences,        2283 Information systems testing technicians,1,1
+    30 Professional occupations in nursing,        3011 Nursing co-ordinators and supervisors,1,0.5
+    40 Professional occupations in education services,        4011 University professors and lecturers,1,1
+    40 Professional occupations in education services,        4012 Post-secondary teaching and research assistants,1,1
+    40 Professional occupations in education services,        4021 College and other vocational instructors,1,1
+    40 Professional occupations in education services,        4031 Secondary school teachers,1,1
+    40 Professional occupations in education services,        4032 Elementary school and kindergarten teachers,0,1
+    40 Professional occupations in education services,        4033 Educational counsellors,1,1
+"    41 Professional occupations in law and social, community and government services",        4111 Judges,1,1
+"    41 Professional occupations in law and social, community and government services",        4112 Lawyers and Quebec notaries,1,1
+"    41 Professional occupations in law and social, community and government services",        4151 Psychologists,1,1
+"    41 Professional occupations in law and social, community and government services",        4155 Probation and parole officers and related occupations,1,1
+"    41 Professional occupations in law and social, community and government services",        4156 Employment counsellors,1,1
+"    41 Professional occupations in law and social, community and government services","        4161 Natural and applied science policy researchers, consultants and program officers",1,1
+"    41 Professional occupations in law and social, community and government services",        4162 Economists and economic policy researchers and analysts,1,1
+"    41 Professional occupations in law and social, community and government services",        4163 Business development officers and marketing researchers and consultants,1,1
+"    41 Professional occupations in law and social, community and government services","        4164 Social policy researchers, consultants and program officers",1,1
+"    41 Professional occupations in law and social, community and government services","        4165 Health policy researchers, consultants and program officers",1,1
+"    41 Professional occupations in law and social, community and government services","        4166 Education policy researchers, consultants and program officers",1,1
+"    41 Professional occupations in law and social, community and government services","        4167 Recreation, sports and fitness policy researchers, consultants and program officers",1,1
+"    41 Professional occupations in law and social, community and government services",        4168 Program officers unique to government,1,1
+"    41 Professional occupations in law and social, community and government services","        4169 Other professional occupations in social science, n.e.c.",1,0.5
+"    42 Paraprofessional occupations in legal, social, community and education services",        4216 Other instructors,1,1
+"    44 Care providers and educational, legal and public protection support occupations",        4413 Elementary and secondary school teacher assistants,1,1
+"    44 Care providers and educational, legal and public protection support occupations",        4422 Correctional service officers,1,1
+"    44 Care providers and educational, legal and public protection support occupations","        4423 By-law enforcement and other regulatory officers, n.e.c.",1,0.5
+    51 Professional occupations in art and culture,        5121 Authors and writers,1,1
+    51 Professional occupations in art and culture,        5122 Editors,1,1
+"    52 Technical occupations in art, culture, recreation and sport",        5221 Photographers,0,0
+"    52 Technical occupations in art, culture, recreation and sport",        5224 Broadcast technicians,0.5,1
+"    52 Technical occupations in art, culture, recreation and sport",        5225 Audio and video recording technicians,0,1
+"    52 Technical occupations in art, culture, recreation and sport",        5231 Announcers and other broadcasters,1,1
+"    52 Technical occupations in art, culture, recreation and sport","        5232 Other performers, n.e.c.",0,0
+"    52 Technical occupations in art, culture, recreation and sport",        5241 Graphic designers and illustrators,0.5,1
+"    52 Technical occupations in art, culture, recreation and sport",        5242 Interior designers and interior decorators,0,0.5
+"    52 Technical occupations in art, culture, recreation and sport","        5245 Patternmakers - textile, leather and fur products",0,0
+"    52 Technical occupations in art, culture, recreation and sport",        5251 Athletes,0,0
+"    52 Technical occupations in art, culture, recreation and sport",        5252 Coaches,1,0
+"    52 Technical occupations in art, culture, recreation and sport","        5254 Program leaders and instructors in recreation, sport and fitness",1,1
+    62 Retail sales supervisors and specialized sales occupations,        6211 Retail sales supervisors,1,1
+    62 Retail sales supervisors and specialized sales occupations,        6221 Technical sales specialists - wholesale trade,0.5,1
+    62 Retail sales supervisors and specialized sales occupations,        6231 Insurance agents and brokers,1,1
+    62 Retail sales supervisors and specialized sales occupations,        6232 Real estate agents and salespersons,1,1
+    62 Retail sales supervisors and specialized sales occupations,        6235 Financial sales representatives,1,1
+    63 Service supervisors and specialized service occupations,        6314 Customer and information services supervisors,0.5,1
+    64 Sales representatives and salespersons - wholesale and retail trade,        6411 Sales and account representatives - wholesale trade (non-technical),1,1
+    65 Service representatives and other customer and personal services occupations,        6521 Travel counsellors,1,0.5
+    65 Service representatives and other customer and personal services occupations,        6523 Airline ticket and service agents,1,1
+    65 Service representatives and other customer and personal services occupations,"        6524 Ground and water transport ticket agents, cargo service representatives and related clerks",0.5,0.5
+    65 Service representatives and other customer and personal services occupations,        6551 Customer services representatives - financial institutions,0.5,0.5
+    65 Service representatives and other customer and personal services occupations,        6552 Other customer and information services representatives,0.5,0.5
+    65 Service representatives and other customer and personal services occupations,"        6561 Image, social and other personal consultants",0,1
+    94 Processing and manufacturing machine operators and related production workers,"        9472 Camera, platemaking and other prepress occupations",0,1
+    02-05 Specialized middle management occupations,        0431 Commissioned police officers,0.5,0
+    02-05 Specialized middle management occupations,        0432 Fire chiefs and senior firefighting officers,0,0
+    02-05 Specialized middle management occupations,        0433 Commissioned officers of the Canadian Armed Forces,0.5,0
+"    07-09 Middle management occupations in trades, transportation, production and utilities",        0711 Construction managers,0.5,0.5
+"    07-09 Middle management occupations in trades, transportation, production and utilities",        0712 Home building and renovation managers,0.5,0.5
+"    07-09 Middle management occupations in trades, transportation, production and utilities",        0714 Facility operation and maintenance managers,1,0.5
+"    07-09 Middle management occupations in trades, transportation, production and utilities",        0821 Managers in agriculture,0.5,0
+"    07-09 Middle management occupations in trades, transportation, production and utilities",        0822 Managers in horticulture,0.5,0
+"    07-09 Middle management occupations in trades, transportation, production and utilities",        0823 Managers in aquaculture,0.5,0
+"    07-09 Middle management occupations in trades, transportation, production and utilities",        0911 Manufacturing managers,0.5,0
+"    07-09 Middle management occupations in trades, transportation, production and utilities",        0912 Utilities managers,1,0
+    14 Office support occupations,        1411 General office support workers,0.5,0
+    14 Office support occupations,        1414 Receptionists,1,0
+"    15 Distribution, tracking and scheduling co-ordination occupations","        1511 Mail, postal and related workers",0.5,0
+"    15 Distribution, tracking and scheduling co-ordination occupations",        1512 Letter carriers,0,0
+"    15 Distribution, tracking and scheduling co-ordination occupations","        1513 Couriers, messengers and door-to-door distributors",0,0
+"    15 Distribution, tracking and scheduling co-ordination occupations",        1521 Shippers and receivers,0,0
+"    15 Distribution, tracking and scheduling co-ordination occupations",        1522 Storekeepers and partspersons,0,0
+"    15 Distribution, tracking and scheduling co-ordination occupations",        1523 Production logistics co-ordinators,0,0.5
+"    15 Distribution, tracking and scheduling co-ordination occupations",        1524 Purchasing and inventory control workers,0,0
+    21 Professional occupations in natural and applied sciences,        2112 Chemists,0.5,0
+    21 Professional occupations in natural and applied sciences,        2132 Mechanical engineers,0,0.5
+    21 Professional occupations in natural and applied sciences,        2141 Industrial and manufacturing engineers,0,0
+    21 Professional occupations in natural and applied sciences,        2142 Metallurgical and materials engineers,0.5,0.5
+    21 Professional occupations in natural and applied sciences,        2143 Mining engineers,0.5,0.5
+    21 Professional occupations in natural and applied sciences,        2144 Geological engineers,0.5,1
+    21 Professional occupations in natural and applied sciences,        2145 Petroleum engineers,0.5,0.5
+    21 Professional occupations in natural and applied sciences,        2154 Land surveyors,0,0
+    22 Technical occupations related to natural and applied sciences,        2211 Chemical technologists and technicians,0,0
+    22 Technical occupations related to natural and applied sciences,        2212 Geological and mineral technologists and technicians,0,0
+    22 Technical occupations related to natural and applied sciences,        2221 Biological technologists and technicians,0,0.5
+    22 Technical occupations related to natural and applied sciences,        2222 Agricultural and fish products inspectors,0,0
+    22 Technical occupations related to natural and applied sciences,        2223 Forestry technologists and technicians,0,0.5
+    22 Technical occupations related to natural and applied sciences,        2224 Conservation and fishery officers,0,0.5
+    22 Technical occupations related to natural and applied sciences,        2232 Mechanical engineering technologists and technicians,0,0.5
+    22 Technical occupations related to natural and applied sciences,        2233 Industrial engineering and manufacturing technologists and technicians,0,0
+    22 Technical occupations related to natural and applied sciences,        2241 Electrical and electronics engineering technologists and technicians,0.5,0
+    22 Technical occupations related to natural and applied sciences,        2242 Electronic service technicians (household and business equipment),1,0
+    22 Technical occupations related to natural and applied sciences,        2243 Industrial instrument technicians and mechanics,0,0
+    22 Technical occupations related to natural and applied sciences,"        2244 Aircraft instrument, electrical and avionics mechanics, technicians and inspectors",0,0
+    22 Technical occupations related to natural and applied sciences,        2261 Non-destructive testers and inspection technicians,0.5,0
+    22 Technical occupations related to natural and applied sciences,        2262 Engineering inspectors and regulatory officers,0.5,0
+    22 Technical occupations related to natural and applied sciences,        2263 Inspectors in public and environmental health and occupational health and safety,0,0
+    22 Technical occupations related to natural and applied sciences,        2264 Construction inspectors,0,0
+    22 Technical occupations related to natural and applied sciences,"        2271 Air pilots, flight engineers and flying instructors",0,0
+    22 Technical occupations related to natural and applied sciences,"        2273 Deck officers, water transport",0,0
+    22 Technical occupations related to natural and applied sciences,"        2274 Engineer officers, water transport",0.5,0
+    22 Technical occupations related to natural and applied sciences,        2275 Railway traffic controllers and marine traffic regulators,0,0
+    30 Professional occupations in nursing,        3012 Registered nurses and registered psychiatric nurses,0,0
+    31 Professional occupations in health (except nursing),        3111 Specialist physicians,0.5,0
+    31 Professional occupations in health (except nursing),        3112 General practitioners and family physicians,0,0
+    31 Professional occupations in health (except nursing),        3113 Dentists,0.5,0
+    31 Professional occupations in health (except nursing),        3114 Veterinarians,0,0
+    31 Professional occupations in health (except nursing),        3121 Optometrists,0,0
+    31 Professional occupations in health (except nursing),        3122 Chiropractors,0,0
+    31 Professional occupations in health (except nursing),        3124 Allied primary health practitioners,0,0
+    31 Professional occupations in health (except nursing),        3125 Other professional occupations in health diagnosing and treating,0,0
+    31 Professional occupations in health (except nursing),        3131 Pharmacists,0,0
+    31 Professional occupations in health (except nursing),        3132 Dietitians and nutritionists,1,0.5
+    31 Professional occupations in health (except nursing),        3141 Audiologists and speech-language pathologists,0,0
+    31 Professional occupations in health (except nursing),        3142 Physiotherapists,0,0
+    31 Professional occupations in health (except nursing),        3143 Occupational therapists,0,1
+    31 Professional occupations in health (except nursing),        3144 Other professional occupations in therapy and assessment,0,0.5
+    32 Technical occupations in health,        3211 Medical laboratory technologists,0,0
+    32 Technical occupations in health,        3212 Medical laboratory technicians and pathologists' assistants,0,0
+    32 Technical occupations in health,        3213 Animal health technologists and veterinary technicians,0,0
+    32 Technical occupations in health,"        3214 Respiratory therapists, clinical perfusionists and cardiopulmonary technologists",0,0
+    32 Technical occupations in health,        3215 Medical radiation technologists,0,0
+    32 Technical occupations in health,        3216 Medical sonographers,0,0
+    32 Technical occupations in health,"        3217 Cardiology technologists and electrophysiological diagnostic technologists, n.e.c.",0,0
+    32 Technical occupations in health,        3219 Other medical technologists and technicians (except dental health),0.5,0
+    32 Technical occupations in health,        3221 Denturists,0,0
+    32 Technical occupations in health,        3222 Dental hygienists and dental therapists,0,0
+    32 Technical occupations in health,"        3223 Dental technologists, technicians and laboratory assistants",0,0
+    32 Technical occupations in health,        3231 Opticians,0,0
+    32 Technical occupations in health,        3232 Practitioners of natural healing,0,0
+    32 Technical occupations in health,        3233 Licensed practical nurses,0,0
+    32 Technical occupations in health,        3234 Paramedical occupations,0,0
+    32 Technical occupations in health,        3236 Massage therapists,0,0
+    32 Technical occupations in health,        3237 Other technical occupations in therapy and assessment,0,0
+    34 Assisting occupations in support of health services,        3411 Dental assistants,0,0
+    34 Assisting occupations in support of health services,"        3413 Nurse aides, orderlies and patient service associates",0,0
+    34 Assisting occupations in support of health services,        3414 Other assisting occupations in support of health services,0,0
+"    41 Professional occupations in law and social, community and government services",        4152 Social workers,0.5,0.5
+"    41 Professional occupations in law and social, community and government services","        4153 Family, marriage and other related counsellors",1,0.5
+"    41 Professional occupations in law and social, community and government services",        4154 Professional occupations in religion,0,0.5
+"    42 Paraprofessional occupations in legal, social, community and education services",        4211 Paralegal and related occupations,0.5,0.5
+"    42 Paraprofessional occupations in legal, social, community and education services",        4212 Social and community service workers,0,0
+"    42 Paraprofessional occupations in legal, social, community and education services",        4214 Early childhood educators and assistants,0,0
+"    42 Paraprofessional occupations in legal, social, community and education services",        4215 Instructors of persons with disabilities,0,0
+"    42 Paraprofessional occupations in legal, social, community and education services",        4217 Other religious occupations,0,0.5
+    43 Occupations in front-line public protection services,        4311 Police officers (except commissioned),0,0
+    43 Occupations in front-line public protection services,        4312 Firefighters,0,0
+    43 Occupations in front-line public protection services,        4313 Non-commissioned ranks of the Canadian Armed Forces,0,0
+"    44 Care providers and educational, legal and public protection support occupations",        4411 Home child care providers,0,0
+"    44 Care providers and educational, legal and public protection support occupations","        4412 Home support workers, housekeepers and related occupations",0,0
+"    44 Care providers and educational, legal and public protection support occupations",        4421 Sheriffs and bailiffs,0.5,0
+    51 Professional occupations in art and culture,        5111 Librarians,0.5,0
+    51 Professional occupations in art and culture,        5112 Conservators and curators,0,0
+    51 Professional occupations in art and culture,        5113 Archivists,0,0.5
+    51 Professional occupations in art and culture,        5123 Journalists,0,0.5
+    51 Professional occupations in art and culture,"        5131 Producers, directors, choreographers and related occupations",0,0.5
+    51 Professional occupations in art and culture,"        5132 Conductors, composers and arrangers",0,0
+    51 Professional occupations in art and culture,        5133 Musicians and singers,0,0
+    51 Professional occupations in art and culture,        5134 Dancers,0,0
+    51 Professional occupations in art and culture,        5135 Actors and comedians,0,0
+    51 Professional occupations in art and culture,"        5136 Painters, sculptors and other visual artists",0.5,1
+"    52 Technical occupations in art, culture, recreation and sport",        5211 Library and public archive technicians,0,0
+"    52 Technical occupations in art, culture, recreation and sport",        5212 Technical occupations related to museums and art galleries,0,0
+"    52 Technical occupations in art, culture, recreation and sport",        5222 Film and video camera operators,0,0
+"    52 Technical occupations in art, culture, recreation and sport",        5223 Graphic arts technicians,0.5,1
+"    52 Technical occupations in art, culture, recreation and sport","        5226 Other technical and co-ordinating occupations in motion pictures, broadcasting and the performing arts",0,1
+"    52 Technical occupations in art, culture, recreation and sport","        5227 Support occupations in motion pictures, broadcasting, photography and the performing arts",0,0
+"    52 Technical occupations in art, culture, recreation and sport","        5243 Theatre, fashion, exhibit and other creative designers",0,0
+"    52 Technical occupations in art, culture, recreation and sport",        5244 Artisans and craftspersons,0,1
+"    52 Technical occupations in art, culture, recreation and sport",        5253 Sports officials and referees,0,0
+    62 Retail sales supervisors and specialized sales occupations,        6222 Retail and wholesale buyers,0,0.5
+    63 Service supervisors and specialized service occupations,        6311 Food service supervisors,0.5,0
+    63 Service supervisors and specialized service occupations,        6312 Executive housekeepers,0.5,0.5
+    63 Service supervisors and specialized service occupations,"        6313 Accommodation, travel, tourism and related services supervisors",0,0.5
+    63 Service supervisors and specialized service occupations,        6315 Cleaning supervisors,0,0.5
+    63 Service supervisors and specialized service occupations,        6316 Other services supervisors,0.5,0.5
+    63 Service supervisors and specialized service occupations,        6321 Chefs,0,0
+    63 Service supervisors and specialized service occupations,        6322 Cooks,0,0
+    63 Service supervisors and specialized service occupations,"        6331 Butchers, meat cutters and fishmongers - retail and wholesale",0,0
+    63 Service supervisors and specialized service occupations,        6332 Bakers,1,0
+    63 Service supervisors and specialized service occupations,        6341 Hairstylists and barbers,0,0
+    63 Service supervisors and specialized service occupations,"        6342 Tailors, dressmakers, furriers and milliners",0.5,0
+    63 Service supervisors and specialized service occupations,        6343 Shoe repairers and shoemakers,0.5,0
+    63 Service supervisors and specialized service occupations,"        6344 Jewellers, jewellery and watch repairers and related occupations",0,0
+    63 Service supervisors and specialized service occupations,        6345 Upholsterers,0,0.5
+    63 Service supervisors and specialized service occupations,        6346 Funeral directors and embalmers,0,0.5
+    64 Sales representatives and salespersons - wholesale and retail trade,        6421 Retail salespersons,0,0
+    65 Service representatives and other customer and personal services occupations,        6511 Maîtres d'hôtel and hosts/hostesses,0,0
+    65 Service representatives and other customer and personal services occupations,        6512 Bartenders,0,0
+    65 Service representatives and other customer and personal services occupations,        6513 Food and beverage servers,0,0
+    65 Service representatives and other customer and personal services occupations,        6522 Pursers and flight attendants,0,0
+    65 Service representatives and other customer and personal services occupations,        6525 Hotel front desk clerks,0,0
+    65 Service representatives and other customer and personal services occupations,        6531 Tour and travel guides,0,0
+    65 Service representatives and other customer and personal services occupations,        6532 Outdoor sport and recreational guides,0,0
+    65 Service representatives and other customer and personal services occupations,        6533 Casino occupations,0,0
+    65 Service representatives and other customer and personal services occupations,        6541 Security guards and related security service occupations,0,0
+    65 Service representatives and other customer and personal services occupations,"        6562 Estheticians, electrologists and related occupations",0,0
+    65 Service representatives and other customer and personal services occupations,        6563 Pet groomers and animal care workers,0,0
+    65 Service representatives and other customer and personal services occupations,        6564 Other personal service occupations,0,0
+    66 Sales support occupations,        6611 Cashiers,0,0
+    66 Sales support occupations,        6621 Service station attendants,0,0
+    66 Sales support occupations,"        6622 Store shelf stockers, clerks and order fillers",0,0
+    66 Sales support occupations,        6623 Other sales related occupations,0,0
+"    67 Service support and other service occupations, n.e.c.","        6711 Food counter attendants, kitchen helpers and related support occupations",0,0
+"    67 Service support and other service occupations, n.e.c.","        6721 Support occupations in accommodation, travel and facilities set-up services",0,0
+"    67 Service support and other service occupations, n.e.c.","        6722 Operators and attendants in amusement, recreation and sport",0,0
+"    67 Service support and other service occupations, n.e.c.",        6731 Light duty cleaners,0,0
+"    67 Service support and other service occupations, n.e.c.",        6732 Specialized cleaners,0,0
+"    67 Service support and other service occupations, n.e.c.","        6733 Janitors, caretakers and building superintendents",0,0
+"    67 Service support and other service occupations, n.e.c.","        6741 Dry cleaning, laundry and related occupations",0,0.5
+"    67 Service support and other service occupations, n.e.c.","        6742 Other service support occupations, n.e.c.",0,0.5
+"    72 Industrial, electrical and construction trades","        7201 Contractors and supervisors, machining, metal forming, shaping and erecting trades and related occupations",0.5,0
+"    72 Industrial, electrical and construction trades","        7202 Contractors and supervisors, electrical trades and telecommunications occupations",0.5,0
+"    72 Industrial, electrical and construction trades","        7203 Contractors and supervisors, pipefitting trades",0.5,0
+"    72 Industrial, electrical and construction trades","        7204 Contractors and supervisors, carpentry trades",0.5,0
+"    72 Industrial, electrical and construction trades","        7205 Contractors and supervisors, other construction trades, installers, repairers and servicers",0.5,0
+"    72 Industrial, electrical and construction trades",        7231 Machinists and machining and tooling inspectors,0.5,0
+"    72 Industrial, electrical and construction trades",        7232 Tool and die makers,0,0
+"    72 Industrial, electrical and construction trades",        7233 Sheet metal workers,0,0
+"    72 Industrial, electrical and construction trades",        7234 Boilermakers,0,0
+"    72 Industrial, electrical and construction trades",        7235 Structural metal and platework fabricators and fitters,0,0
+"    72 Industrial, electrical and construction trades",        7236 Ironworkers,0,0
+"    72 Industrial, electrical and construction trades",        7237 Welders and related machine operators,0,0
+"    72 Industrial, electrical and construction trades",        7241 Electricians (except industrial and power system),0.5,0
+"    72 Industrial, electrical and construction trades",        7242 Industrial electricians,0,0
+"    72 Industrial, electrical and construction trades",        7243 Power system electricians,0,0
+"    72 Industrial, electrical and construction trades",        7244 Electrical power line and cable workers,0,0
+"    72 Industrial, electrical and construction trades",        7245 Telecommunications line and cable workers,0,0
+"    72 Industrial, electrical and construction trades",        7246 Telecommunications installation and repair workers,0,0
+"    72 Industrial, electrical and construction trades",        7247 Cable television service and maintenance technicians,0,0
+"    72 Industrial, electrical and construction trades",        7251 Plumbers,0,0
+"    72 Industrial, electrical and construction trades","        7252 Steamfitters, pipefitters and sprinkler system installers",0,0
+"    72 Industrial, electrical and construction trades",        7253 Gas fitters,0,0
+"    72 Industrial, electrical and construction trades",        7271 Carpenters,0,0
+"    72 Industrial, electrical and construction trades",        7272 Cabinetmakers,0,0
+"    72 Industrial, electrical and construction trades",        7281 Bricklayers,0,0
+"    72 Industrial, electrical and construction trades",        7282 Concrete finishers,0,0
+"    72 Industrial, electrical and construction trades",        7283 Tilesetters,0,0
+"    72 Industrial, electrical and construction trades","        7284 Plasterers, drywall installers and finishers and lathers",0,0
+"    72 Industrial, electrical and construction trades",        7291 Roofers and shinglers,0,0
+"    72 Industrial, electrical and construction trades",        7292 Glaziers,0,0
+"    72 Industrial, electrical and construction trades",        7293 Insulators,0,0
+"    72 Industrial, electrical and construction trades",        7294 Painters and decorators (except interior decorators),0,0
+"    72 Industrial, electrical and construction trades",        7295 Floor covering installers,0,0
+    73 Maintenance and equipment operation trades,"        7301 Contractors and supervisors, mechanic trades",0.5,0
+    73 Maintenance and equipment operation trades,"        7302 Contractors and supervisors, heavy equipment operator crews",0.5,0.5
+    73 Maintenance and equipment operation trades,"        7303 Supervisors, printing and related occupations",0.5,0.5
+    73 Maintenance and equipment operation trades,"        7304 Supervisors, railway transport operations",0,0.5
+    73 Maintenance and equipment operation trades,"        7305 Supervisors, motor transport and other ground transit operators",0,0.5
+    73 Maintenance and equipment operation trades,        7311 Construction millwrights and industrial mechanics,0,0
+    73 Maintenance and equipment operation trades,        7312 Heavy-duty equipment mechanics,0,0
+    73 Maintenance and equipment operation trades,"        7313 Heating, refrigeration and air conditioning mechanics",0,0
+    73 Maintenance and equipment operation trades,        7314 Railway carmen/women,0,0
+    73 Maintenance and equipment operation trades,        7315 Aircraft mechanics and aircraft inspectors,0,0
+    73 Maintenance and equipment operation trades,        7316 Machine fitters,0,0
+    73 Maintenance and equipment operation trades,        7318 Elevator constructors and mechanics,0,0
+    73 Maintenance and equipment operation trades,"        7321 Automotive service technicians, truck and bus mechanics and mechanical repairers",0,0
+    73 Maintenance and equipment operation trades,        7322 Motor vehicle body repairers,0,0
+    73 Maintenance and equipment operation trades,        7331 Oil and solid fuel heating mechanics,0,0
+    73 Maintenance and equipment operation trades,        7332 Appliance servicers and repairers,0,0
+    73 Maintenance and equipment operation trades,        7333 Electrical mechanics,0,0
+    73 Maintenance and equipment operation trades,"        7334 Motorcycle, all-terrain vehicle and other related mechanics",0,0
+    73 Maintenance and equipment operation trades,        7335 Other small engine and small equipment repairers,0,0
+    73 Maintenance and equipment operation trades,        7361 Railway and yard locomotive engineers,0.5,0
+    73 Maintenance and equipment operation trades,        7362 Railway conductors and brakemen/women,0.5,0
+    73 Maintenance and equipment operation trades,        7371 Crane operators,0,0
+    73 Maintenance and equipment operation trades,"        7372 Drillers and blasters - surface mining, quarrying and construction",0,0
+    73 Maintenance and equipment operation trades,        7373 Water well drillers,0,0
+    73 Maintenance and equipment operation trades,        7381 Printing press operators,0,0
+    73 Maintenance and equipment operation trades,"        7384 Other trades and related occupations, n.e.c.",0.5,0
+"    74 Other installers, repairers and servicers and material handlers",        7441 Residential and commercial installers and servicers,0,0
+"    74 Other installers, repairers and servicers and material handlers",        7442 Waterworks and gas maintenance workers,0,0
+"    74 Other installers, repairers and servicers and material handlers",        7444 Pest controllers and fumigators,0,0
+"    74 Other installers, repairers and servicers and material handlers",        7445 Other repairers and servicers,0,0
+"    74 Other installers, repairers and servicers and material handlers",        7451 Longshore workers,0,0
+"    74 Other installers, repairers and servicers and material handlers",        7452 Material handlers,0,0
+    75 Transport and heavy equipment operation and related maintenance occupations,        7511 Transport truck drivers,0,0
+    75 Transport and heavy equipment operation and related maintenance occupations,"        7512 Bus drivers, subway operators and other transit operators",0,0
+    75 Transport and heavy equipment operation and related maintenance occupations,        7513 Taxi and limousine drivers and chauffeurs,0,0
+    75 Transport and heavy equipment operation and related maintenance occupations,        7514 Delivery and courier service drivers,0,0
+    75 Transport and heavy equipment operation and related maintenance occupations,        7521 Heavy equipment operators (except crane),0,0
+    75 Transport and heavy equipment operation and related maintenance occupations,        7522 Public works maintenance equipment operators and related workers,0,0
+    75 Transport and heavy equipment operation and related maintenance occupations,        7531 Railway yard and track maintenance workers,0,0
+    75 Transport and heavy equipment operation and related maintenance occupations,        7532 Water transport deck and engine room crew,0.5,0
+    75 Transport and heavy equipment operation and related maintenance occupations,        7533 Boat and cable ferry operators and related occupations,0,0
+    75 Transport and heavy equipment operation and related maintenance occupations,        7534 Air transport ramp attendants,0,0
+    75 Transport and heavy equipment operation and related maintenance occupations,        7535 Other automotive mechanical installers and servicers,0,0
+"    76 Trades helpers, construction labourers and related occupations",        7611 Construction trades helpers and labourers,0,0
+"    76 Trades helpers, construction labourers and related occupations",        7612 Other trades helpers and labourers,0,0
+"    76 Trades helpers, construction labourers and related occupations",        7621 Public works and maintenance labourers,0,0
+"    76 Trades helpers, construction labourers and related occupations",        7622 Railway and motor transport labourers,0,0
+"    82 Supervisors and technical occupations in natural resources, agriculture and related production","        8211 Supervisors, logging and forestry",0,0.5
+"    82 Supervisors and technical occupations in natural resources, agriculture and related production","        8221 Supervisors, mining and quarrying",0,0
+"    82 Supervisors and technical occupations in natural resources, agriculture and related production","        8222 Contractors and supervisors, oil and gas drilling and services",0,0
+"    82 Supervisors and technical occupations in natural resources, agriculture and related production",        8231 Underground production and development miners,0,0
+"    82 Supervisors and technical occupations in natural resources, agriculture and related production","        8232 Oil and gas well drillers, servicers, testers and related workers",0,0
+"    82 Supervisors and technical occupations in natural resources, agriculture and related production",        8241 Logging machinery operators,0,0
+"    82 Supervisors and technical occupations in natural resources, agriculture and related production","        8252 Agricultural service contractors, farm supervisors and specialized livestock workers",0,0
+"    82 Supervisors and technical occupations in natural resources, agriculture and related production","        8255 Contractors and supervisors, landscaping, grounds maintenance and horticulture services",0.5,0
+"    82 Supervisors and technical occupations in natural resources, agriculture and related production",        8261 Fishing masters and officers,0.5,0
+"    82 Supervisors and technical occupations in natural resources, agriculture and related production",        8262 Fishermen/women,0,0
+"    84 Workers in natural resources, agriculture and related production",        8411 Underground mine service and support workers,0,0
+"    84 Workers in natural resources, agriculture and related production",        8412 Oil and gas well drilling and related workers and services operators,0,0
+"    84 Workers in natural resources, agriculture and related production",        8421 Chain saw and skidder operators,0,0
+"    84 Workers in natural resources, agriculture and related production",        8422 Silviculture and forestry workers,0,0
+"    84 Workers in natural resources, agriculture and related production",        8431 General farm workers,0,0
+"    84 Workers in natural resources, agriculture and related production",        8432 Nursery and greenhouse workers,0,0
+"    84 Workers in natural resources, agriculture and related production",        8441 Fishing vessel deckhands,0,0
+"    84 Workers in natural resources, agriculture and related production",        8442 Trappers and hunters,0,0
+"    86 Harvesting, landscaping and natural resources labourers",        8611 Harvesting labourers,0,0
+"    86 Harvesting, landscaping and natural resources labourers",        8612 Landscaping and grounds maintenance labourers,0,0
+"    86 Harvesting, landscaping and natural resources labourers",        8613 Aquaculture and marine harvest labourers,0,0
+"    86 Harvesting, landscaping and natural resources labourers",        8614 Mine labourers,0,0
+"    86 Harvesting, landscaping and natural resources labourers","        8615 Oil and gas drilling, servicing and related labourers",0,0
+"    86 Harvesting, landscaping and natural resources labourers",        8616 Logging and forestry labourers,0,0
+"    92 Processing, manufacturing and utilities supervisors and central control operators","        9211 Supervisors, mineral and metal processing",0,0
+"    92 Processing, manufacturing and utilities supervisors and central control operators","        9212 Supervisors, petroleum, gas and chemical processing and utilities",0,0
+"    92 Processing, manufacturing and utilities supervisors and central control operators","        9213 Supervisors, food and beverage processing",0,0
+"    92 Processing, manufacturing and utilities supervisors and central control operators","        9214 Supervisors, plastic and rubber products manufacturing",0,0
+"    92 Processing, manufacturing and utilities supervisors and central control operators","        9215 Supervisors, forest products processing",0,0
+"    92 Processing, manufacturing and utilities supervisors and central control operators","        9217 Supervisors, textile, fabric, fur and leather products processing and manufacturing",0,0
+"    92 Processing, manufacturing and utilities supervisors and central control operators","        9221 Supervisors, motor vehicle assembling",0,0
+"    92 Processing, manufacturing and utilities supervisors and central control operators","        9222 Supervisors, electronics manufacturing",0,0
+"    92 Processing, manufacturing and utilities supervisors and central control operators","        9223 Supervisors, electrical products manufacturing",0,0
+"    92 Processing, manufacturing and utilities supervisors and central control operators","        9224 Supervisors, furniture and fixtures manufacturing",0,0
+"    92 Processing, manufacturing and utilities supervisors and central control operators","        9226 Supervisors, other mechanical and metal products manufacturing",0,0
+"    92 Processing, manufacturing and utilities supervisors and central control operators","        9227 Supervisors, other products manufacturing and assembly",0,0
+"    92 Processing, manufacturing and utilities supervisors and central control operators","        9231 Central control and process operators, mineral and metal processing",0,0
+"    92 Processing, manufacturing and utilities supervisors and central control operators","        9232 Central control and process operators, petroleum, gas and chemical processing",0,0
+"    92 Processing, manufacturing and utilities supervisors and central control operators","        9235 Pulping, papermaking and coating control operators",0,0
+"    92 Processing, manufacturing and utilities supervisors and central control operators",        9241 Power engineers and power systems operators,0.5,0
+"    92 Processing, manufacturing and utilities supervisors and central control operators",        9243 Water and waste treatment plant operators,0,0
+    94 Processing and manufacturing machine operators and related production workers,"        9411 Machine operators, mineral and metal processing",0,0
+    94 Processing and manufacturing machine operators and related production workers,        9412 Foundry workers,0,0
+    94 Processing and manufacturing machine operators and related production workers,        9413 Glass forming and finishing machine operators and glass cutters,0,0
+    94 Processing and manufacturing machine operators and related production workers,"        9414 Concrete, clay and stone forming operators",0,0
+    94 Processing and manufacturing machine operators and related production workers,"        9415 Inspectors and testers, mineral and metal processing",0,0
+    94 Processing and manufacturing machine operators and related production workers,        9416 Metalworking and forging machine operators,0,0
+    94 Processing and manufacturing machine operators and related production workers,        9417 Machining tool operators,0,0
+    94 Processing and manufacturing machine operators and related production workers,        9418 Other metal products machine operators,0,0
+    94 Processing and manufacturing machine operators and related production workers,        9421 Chemical plant machine operators,0,0
+    94 Processing and manufacturing machine operators and related production workers,        9422 Plastics processing machine operators,0,0
+    94 Processing and manufacturing machine operators and related production workers,        9423 Rubber processing machine operators and related workers,0,0
+    94 Processing and manufacturing machine operators and related production workers,        9431 Sawmill machine operators,0,0
+    94 Processing and manufacturing machine operators and related production workers,        9432 Pulp mill machine operators,0,0
+    94 Processing and manufacturing machine operators and related production workers,        9433 Papermaking and finishing machine operators,0,0
+    94 Processing and manufacturing machine operators and related production workers,        9434 Other wood processing machine operators,0,0
+    94 Processing and manufacturing machine operators and related production workers,        9435 Paper converting machine operators,0,0
+    94 Processing and manufacturing machine operators and related production workers,        9436 Lumber graders and other wood processing inspectors and graders,0,0
+    94 Processing and manufacturing machine operators and related production workers,        9437 Woodworking machine operators,0,0
+    94 Processing and manufacturing machine operators and related production workers,"        9441 Textile fibre and yarn, hide and pelt processing machine operators and workers",0,0
+    94 Processing and manufacturing machine operators and related production workers,"        9442 Weavers, knitters and other fabric making occupations",0,0
+    94 Processing and manufacturing machine operators and related production workers,"        9445 Fabric, fur and leather cutters",0,0
+    94 Processing and manufacturing machine operators and related production workers,        9446 Industrial sewing machine operators,0,0
+    94 Processing and manufacturing machine operators and related production workers,"        9447 Inspectors and graders, textile, fabric, fur and leather products manufacturing",0,0
+    94 Processing and manufacturing machine operators and related production workers,"        9461 Process control and machine operators, food and beverage processing",0,0
+    94 Processing and manufacturing machine operators and related production workers,"        9462 Industrial butchers and meat cutters, poultry preparers and related workers",0,0
+    94 Processing and manufacturing machine operators and related production workers,        9463 Fish and seafood plant workers,0,0
+    94 Processing and manufacturing machine operators and related production workers,"        9465 Testers and graders, food and beverage processing",0,0
+    94 Processing and manufacturing machine operators and related production workers,        9471 Plateless printing equipment operators,0,0
+    94 Processing and manufacturing machine operators and related production workers,        9473 Binding and finishing machine operators,0,0
+    94 Processing and manufacturing machine operators and related production workers,        9474 Photographic and film processors,0,0
+    95 Assemblers in manufacturing,        9521 Aircraft assemblers and aircraft assembly inspectors,0,0
+    95 Assemblers in manufacturing,"        9522 Motor vehicle assemblers, inspectors and testers",0,0
+    95 Assemblers in manufacturing,"        9523 Electronics assemblers, fabricators, inspectors and testers",0,0
+    95 Assemblers in manufacturing,"        9524 Assemblers and inspectors, electrical appliance, apparatus and equipment manufacturing",0,0
+    95 Assemblers in manufacturing,"        9525 Assemblers, fabricators and inspectors, industrial electrical motors and transformers",0,0
+    95 Assemblers in manufacturing,        9526 Mechanical assemblers and inspectors,0,0
+    95 Assemblers in manufacturing,"        9527 Machine operators and inspectors, electrical apparatus manufacturing",0,0
+    95 Assemblers in manufacturing,        9531 Boat assemblers and inspectors,0,0
+    95 Assemblers in manufacturing,        9532 Furniture and fixture assemblers and inspectors,0,0
+    95 Assemblers in manufacturing,        9533 Other wood products assemblers and inspectors,0,0
+    95 Assemblers in manufacturing,        9534 Furniture finishers and refinishers,0,0
+    95 Assemblers in manufacturing,"        9535 Plastic products assemblers, finishers and inspectors",0,0
+    95 Assemblers in manufacturing,"        9536 Industrial painters, coaters and metal finishing process operators",0,0
+    95 Assemblers in manufacturing,"        9537 Other products assemblers, finishers and inspectors",0,0
+"    96 Labourers in processing, manufacturing and utilities",        9611 Labourers in mineral and metal processing,0,0
+"    96 Labourers in processing, manufacturing and utilities",        9612 Labourers in metal fabrication,0,0
+"    96 Labourers in processing, manufacturing and utilities",        9613 Labourers in chemical products processing and utilities,0,0
+"    96 Labourers in processing, manufacturing and utilities","        9614 Labourers in wood, pulp and paper processing",0,0
+"    96 Labourers in processing, manufacturing and utilities",        9615 Labourers in rubber and plastic products manufacturing,0,0
+"    96 Labourers in processing, manufacturing and utilities",        9616 Labourers in textile processing,0,0
+"    96 Labourers in processing, manufacturing and utilities",        9617 Labourers in food and beverage processing,0,0
+"    96 Labourers in processing, manufacturing and utilities",        9618 Labourers in fish and seafood processing,0,0
+"    96 Labourers in processing, manufacturing and utilities","        9619 Other labourers in processing, manufacturing and utilities",0,0

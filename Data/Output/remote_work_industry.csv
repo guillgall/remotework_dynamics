@@ -1,0 +1,23 @@
+﻿Sector,Jobs (Benchmark),Jobs (Alternative)
+Agriculture,0.17,0.22
+Forestry and logging and support activities for forestry,0.25,0.27
+"Fishing, hunting and trapping",0.18,0.19
+"Mining, quarrying, and oil and gas extraction",0.32,0.32
+Utilities,0.39,0.38
+Construction,0.39,0.38
+Manufacturing - durable goods,0.37,0.36
+Manufacturing - non-durable goods,0.35,0.33
+Wholesale trade,0.44,0.41
+Retail trade,0.39,0.36
+Transportation and warehousing,0.39,0.38
+Finance and insurance,0.62,0.57
+Real estate and rental and leasing,0.46,0.42
+"Professional, scientific and technical services",0.43,0.41
+"Business, building and other support service",0.34,0.32
+Educational services,0.42,0.4
+Health care and social assistance,0.41,0.38
+"Information, culture and recreation",0.41,0.39
+Accommodation and food services,0.39,0.35
+Other services (except public administration),0.38,0.36
+Public administration,0.37,0.35
+Total,0.39,0.37

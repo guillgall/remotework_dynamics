@@ -2,7 +2,7 @@ This repository contains the code and data for the paper "[Remote Work and Emplo
 
 ## Results
 
-If you simply want to download some of our Remote-Work Index results without running any replication code, you can grab the following CSV files about:
+If you want to download some of our Remote-Work Index results without running any replication code, you can download following CSV files:
 - [Canada (Aggregate), Provincial, City and Territorial level](Data/Output/telework_estimates.csv).
 - [Industry level](Data/Output/remote_work_industry.csv).
 - [By percentile of income distribution](Data/Output/remote_income_percentile.csv).

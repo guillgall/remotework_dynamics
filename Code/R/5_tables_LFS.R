@@ -70,7 +70,7 @@ dev.off()
 #employment dynamics plots
 
 workers_dynamics <- read.csv("./Data/Output/remote_worker_characteristics.csv")
-dynamics_2digit <- read.csv("./Data/Output/remote_employment_dynamics_2_digit occp_with_code.csv")
+dynamics_2digit <- read.csv("./Data/Output/remote_employment_dynamics_2_digit_occp_with_code.csv")
 dynamics_10oc <- read.csv("./Data/Output/remote_employment_dynamics_10_occp.csv")
 dynamics_industry <- read.csv("./Data/Output/remote_employment_dynamics_industry_level.csv")
 dynamics_province <- read.csv("./Data/Output/remote_employment_dynamics_province.csv")
@@ -81,7 +81,7 @@ dynamics_city <- read.csv("./Data/Output/remote_employment_dynamics_CMAs.csv")
 colnames(workers_dynamics) <- c("char", "janfeb20", "febmar20", "marapr20", "febapr20")
 
 workers_dynamics$char <- factor(workers_dynamics$char, 
-                         levels = workers_dynamics$char[order(workers_dynamics$febmar20)])
+                                levels = workers_dynamics$char[order(workers_dynamics$febmar20)])
 
 g <- ggplot(data=workers_dynamics, aes(x=char, y=febmar20)) 
 g <- g +  geom_bar(stat="identity") + coord_flip()
@@ -102,11 +102,13 @@ g
 
 
 #2 digit occupations
+
 colnames(dynamics_2digit) <- c("code", "dummy", 
-                               "occupation",
-                               "benchmark", "alternative",
-                               "janfeb20", "febmar20", 
-                               "marapr20", "febapr20")
+                                     "essential_share",
+                                     "occupation",
+                                     "benchmark", "alternative",
+                                     "janfeb20", "febmar20", 
+                                     "marapr20", "febapr20")
 
 #dynamics_2digit <- dynamics_2digit[-nrow(dynamics_2digit),]
 
@@ -147,6 +149,19 @@ pdf("./Data/Output/dynamics_2digit_febapr20.pdf")
 g
 dev.off()
 
+g <- ggplot(data=dynamics_2digit, aes(y=marapr20, x=benchmark, color=essential)) 
+g <- g +  geom_point() + geom_smooth(method=lm, se=FALSE)
+g <- g + geom_text(aes(label=code),hjust=0, vjust=0, size = 5)
+g <- g + theme(axis.text.x = element_text(size=12), axis.text.y = element_text(size=12))
+g <- g + labs(y="Change (%) in Employment", x = "Remote-Work Index")
+g <- g + theme(legend.position="none")
+g
+
+#save file
+pdf("./Data/Output/dynamics_2digit_marapr20.pdf")
+g
+dev.off()
+
 
 #10 broad occupation
 
@@ -184,9 +199,9 @@ dev.off()
 
 #province
 colnames(dynamics_province) <- c("province",
-                             "benchmark", "alternative",
-                             "janfeb20", "febmar20", 
-                             "marapr20", "febapr20")
+                                 "benchmark", "alternative",
+                                 "janfeb20", "febmar20", 
+                                 "marapr20", "febapr20")
 
 
 g <- ggplot(data=dynamics_province, aes(y=febapr20, x=benchmark)) 
@@ -215,9 +230,9 @@ dev.off()
 
 #city
 colnames(dynamics_city) <- c("city",
-                                 "benchmark", "alternative",
-                                 "janfeb20", "febmar20", 
-                                 "marapr20", "febapr20")
+                             "benchmark", "alternative",
+                             "janfeb20", "febmar20", 
+                             "marapr20", "febapr20")
 
 g <- ggplot(data=dynamics_city, aes(y=febmar20, x=benchmark)) 
 g <- g +  geom_point() + geom_smooth(method=lm, se=FALSE)
@@ -296,7 +311,7 @@ stargazer(ols1, ols2, ols3, ols4, ols5, ols6, ols7, ols8,
                            "$\\triangle q_{j,Mar,Apr}$",
                            "$\\triangle q_{j,Feb,Apr}$"),
           covariate.labels=c("$S_{j} (Benchmark)$",
-                             "$D$"),
+                             "$D_{j}$"),
           label="tab:regression_dynamics_2digit",
           title="Employment Change and Remote Work Index: 2-digit level",
           omit.stat=c("ser", "f"),
@@ -324,13 +339,60 @@ stargazer(ols1, ols2, ols3, ols4, ols5, ols6, ols7, ols8,
                            "$\\triangle q_{j,Mar,Apr}$",
                            "$\\triangle q_{j,Feb,Apr}$"),
           covariate.labels=c("$S_{j} (Alternative)$",
-                             "$D$"),
+                             "$D_{j}$"),
           label="tab:regression_dynamics_2digit_alternative",
-          title="Employment Change and Remote Work Index: 2-digit level (Robustness Check: Alternative Index)",
+          title="Employment Change and Remote Work Index: 2-digit level (Robustness Check: Alternative Remote Work Index)",
           omit.stat=c("ser", "f"),
           font.size="footnotesize",
           out="./Data/Output/regression_dynamics_2digit_alternative.tex")
 
+#alternative essential service index (with benchmark remote work index)
+ols1 <- lm(janfeb20 ~ benchmark + essential, data=dynamics_2digit)
+ols2 <- lm(janfeb20 ~ benchmark + essential_share, data=dynamics_2digit)
+ols3 <- lm(febmar20 ~ benchmark + essential, data=dynamics_2digit)
+ols4 <- lm(febmar20 ~ benchmark + essential_share, data=dynamics_2digit)
+ols5 <- lm(marapr20 ~ benchmark + essential, data=dynamics_2digit)
+ols6 <- lm(marapr20 ~ benchmark + essential_share, data=dynamics_2digit)
+ols7 <- lm(febapr20 ~ benchmark + essential, data=dynamics_2digit)
+ols8 <- lm(febapr20 ~ benchmark + essential_share, data=dynamics_2digit)
+
+stargazer(ols1, ols2, ols3, ols4, ols5, ols6, ols7, ols8,
+          dep.var.labels=c("$\\triangle q_{j,Jan,Feb}$", 
+                           "$\\triangle q_{j,Feb,Mar}$",
+                           "$\\triangle q_{j,Mar,Apr}$",
+                           "$\\triangle q_{j,Feb,Apr}$"),
+          covariate.labels=c("$S_{j} (Benchmark)$",
+                             "$D_{j}$",
+                             "$ES_{j}$"),
+          label="tab:regression_dynamics_2digit_robustness_essential_service",
+          title="Employment Change and Remote Work Index: 2-digit level (Robustness Check: Essential Service Index)",
+          omit.stat=c("ser", "f"),
+          font.size="footnotesize",
+          out="./Data/Output/regression_dynamics_2digit_robustness_essential_service.tex")
+
+#alternative essential service index (with alternative remote work index)
+ols1 <- lm(janfeb20 ~ alternative + essential, data=dynamics_2digit)
+ols2 <- lm(janfeb20 ~ alternative + essential_share, data=dynamics_2digit)
+ols3 <- lm(febmar20 ~ alternative + essential, data=dynamics_2digit)
+ols4 <- lm(febmar20 ~ alternative + essential_share, data=dynamics_2digit)
+ols5 <- lm(marapr20 ~ alternative + essential, data=dynamics_2digit)
+ols6 <- lm(marapr20 ~ alternative + essential_share, data=dynamics_2digit)
+ols7 <- lm(febapr20 ~ alternative + essential, data=dynamics_2digit)
+ols8 <- lm(febapr20 ~ alternative + essential_share, data=dynamics_2digit)
+
+stargazer(ols1, ols2, ols3, ols4, ols5, ols6, ols7, ols8,
+          dep.var.labels=c("$\\triangle q_{j,Jan,Feb}$", 
+                           "$\\triangle q_{j,Feb,Mar}$",
+                           "$\\triangle q_{j,Mar,Apr}$",
+                           "$\\triangle q_{j,Feb,Apr}$"),
+          covariate.labels=c("$S_{j} (Alternative)$",
+                             "$D_{j}$",
+                             "$ES_{j}$"),
+          label="tab:regression_dynamics_2digit_alternative_robustness_essential_service",
+          title="Employment Change and Remote Work Index: 2-digit level (Robustness Check: Alternative Remote Work Index and Essential Service Index)",
+          omit.stat=c("ser", "f"),
+          font.size="footnotesize",
+          out="./Data/Output/regression_dynamics_2digit_alternative_robustness_essential_service.tex")
 
 #10 occupation group
 ols1 <- lm(janfeb20 ~ benchmark, data=dynamics_10oc)
@@ -487,3 +549,46 @@ g <- g + theme(axis.text.x = element_text(size=12), axis.text.y = element_text(s
 g <- g + labs(y="Remote-Work Index", x = "Female Share")
 g <- g + theme(legend.position="none")
 g
+
+###
+#essential service dummy robustness
+
+dynamics_2digit_check <- read.csv("./Data/Output/remote_employment_dynamics_2_digit_occp_with_code_revised.csv")
+
+colnames(dynamics_2digit_check) <- c("code", "dummy", 
+                                     "essential_share",
+                                     "occupation",
+                                     "benchmark", "alternative",
+                                     "janfeb20", "febmar20", 
+                                     "marapr20", "febapr20")
+
+dynamics_2digit_check <- dynamics_2digit_check[order(dynamics_2digit_check$essential_share),]
+
+dynamics_2digit_check$essential_share_round <- round(dynamics_2digit_check$essential_share,0)
+
+
+ols1 <- lm(janfeb20 ~ benchmark + essential_share, data=dynamics_2digit_check)
+ols2 <- lm(febmar20 ~ benchmark + essential_share, data=dynamics_2digit_check)
+ols3 <- lm(marapr20 ~ benchmark + essential_share, data=dynamics_2digit_check)
+ols4 <- lm(febapr20 ~ benchmark + essential_share, data=dynamics_2digit_check)
+
+summary(ols1)
+summary(ols2)
+summary(ols3)
+summary(ols4)
+
+g <- ggplot(data=dynamics_2digit_check, aes(y=dummy, x=essential_share)) 
+g <- g +  geom_point() + geom_smooth(method=lm, se=FALSE)
+g <- g + theme(axis.text.x = element_text(size=12), axis.text.y = element_text(size=12))
+g <- g + labs(y="Essential Dummy", x = "Essential Share")
+g <- g + theme(legend.position="none")
+g
+
+
+g <- ggplot(data=dynamics_2digit_check, aes(y=dummy, x=)) 
+g <- g +  geom_point() + geom_smooth(method=lm, se=FALSE)
+g <- g + theme(axis.text.x = element_text(size=12), axis.text.y = element_text(size=12))
+g <- g + labs(y="Essential Dummy", x = "Essential Share")
+g <- g + theme(legend.position="none")
+g
+

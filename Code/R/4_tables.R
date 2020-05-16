@@ -56,6 +56,17 @@ print(xtable(cities[,1:3],
       caption.placement = "top",
       file="./Data/Output/table_cities.tex")
 
+#top 3 and bottom 3 (but exluding multiple Ottawa divisions)
+print(xtable(cities[c(2,3,5,(nrow(cities)-2):nrow(cities)),1:3],
+             caption = "Share of jobs that can be done at home, by city (top 3 and bottom 3)",
+             label = "tab:cities_subset",
+             align = "clcc"),
+      sanitize.text.function=function(x){x},
+      include.rownames = FALSE,
+      type="latex", 
+      caption.placement = "top",
+      file="./Data/Output/table_cities_subset.tex")
+
 #for slides:
 print(xtable(cities[1:18,1:3],
              caption = "Share of jobs that can be done at home, by city",
@@ -169,3 +180,20 @@ g
 #pdf("./Data/Output/jobs_territory_comparison_robustness.pdf")
 #g
 #dev.off()
+
+#compare benchmark vs alternative remote work index
+compare <- read.csv("./Data/Output/remote_differs_benchmark_alternative.csv")
+
+colnames(compare)[1] <- "Occupation"
+
+print(xtable(compare,
+             caption = "Remote Work Index: Benchmark vs. Alternative Example Comparison",
+             label = "tab:remote_work_index_comparison",
+             align = "llcc"),
+      sanitize.text.function=function(x){x},
+      include.rownames = FALSE,
+      type="latex", 
+      caption.placement = "top",
+      file="./Data/Output/remote_work_index_comparison.tex")
+
+

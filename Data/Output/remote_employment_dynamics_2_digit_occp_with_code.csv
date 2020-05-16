@@ -1,41 +1,41 @@
-﻿NOC,Dummy,2-digit occupation,Jobs Benchmark,Jobs Alternative,"Growth of Employment, Jan-Feb, 2020","Growth of Employment, Feb-Mar, 2020","Growth of Employment, Mar-Apr, 2020","Growth of Employment, Feb-Apr, 2020"
-1,0,Senior management occupations,1,1,-7.53,-14.96,-10.43,-26.96
-506,0,Specialized middle management occupations,0.89,0.87,1.67,-1.38,-6.47,-7.94
-6,0,Middle management occupations in retail and wholesale trade and customer services,1,0.45,-0.72,-7.02,-4.96,-12.33
-708,0,"Middle management occupations in trades, transportation, production and utilities",0.2,0.15,0.14,-6.77,-5.27,-12.39
-11,1,Professional occupations in business and finance,1,0.89,-0.18,-1.72,-5,-6.8
-12,1,Administrative and financial supervisors and administrative occupations,1,0.56,0.7,-3.25,-3.45,-6.82
-13,1,"Finance, insurance and related business administrative occupations",0.8,0.9,1.05,-0.85,-5.48,-6.38
-14,0,Office support occupations,0.77,0.42,0.52,-4.87,-3.14,-8.17
-15,0,"Distribution, tracking and scheduling co-ordination occupations",0.22,0.08,-1.41,-10.42,2.7,-7.44
-21,0,Professional occupations in natural and applied sciences,0.7,0.67,1.89,-5.16,-3.9,-9.26
-22,0,Technical occupations related to natural and applied sciences,0.38,0.4,0.55,-2.27,-5.32,-7.71
-30,1,Professional occupations in nursing,0.5,0.25,0.99,-6.41,-2.98,-9.58
-31,1,Professional occupations in health (except nursing),0,0.05,0.1,-4.08,-2.66,-6.84
-32,1,Technical occupations in health,0,0.03,1.51,-4.49,-4.87,-9.58
-34,1,Assisting occupations in support of health services,0,0,-2.17,-4.53,-6.57,-11.4
-40,0,Professional occupations in education services,1,1,-0.14,-3.06,-3.19,-6.35
-41,0,"Professional occupations in law and social, community and government services",0.82,0.87,-0.95,-4.9,-5.63,-10.81
-42,0,"Paraprofessional occupations in legal, social, community and education services",0.33,0.54,-2.25,-6.35,-7.75,-14.58
-43,1,Occupations in front-line public protection services,0,0,4.89,1.08,-7.2,-6.05
-44,0,"Care providers and educational, legal and public protection support occupations",0.5,0.17,2.41,-10.23,-0.09,-10.33
-51,0,Professional occupations in art and culture,0.33,0.29,5.64,-7.84,4.32,-3.19
-52,0,"Technical occupations in art, culture, recreation and sport",0.55,0.36,0,-6.77,-4.53,-11.6
-62,0,Retail sales supervisors and specialized sales occupations,0.83,0.83,0.05,-6.98,-7.39,-14.89
-63,0,Service supervisors and specialized service occupations,0.06,0.06,-1.07,-9.41,-5.24,-15.14
-64,0,Sales representatives and salespersons - wholesale and retail trade,0.5,0.25,-1.27,-6.08,-5.94,-12.38
-65,1,Service representatives and other customer and personal services occupations,0.33,0.33,2.24,-5.71,-8.09,-14.26
-66,0,Sales support occupations,0,0.19,0.61,-12.6,0.81,-11.68
-67,0,"Service support and other service occupations, n.e.c.",0,0,2.17,-12.17,-4.62,-17.36
-72,0,"Industrial, electrical and construction trades",0,0,-0.99,-5.09,-6.98,-12.43
-73,0,Maintenance and equipment operation trades,0,0,-0.25,-9.05,-7.02,-16.71
-74,0,"Other installers, repairers and servicers and material handlers",0,0,1.44,-10.31,-0.11,-10.43
-75,1,Transport and heavy equipment operation and related maintenance occupations,0,0,2.78,-7.05,-3.93,-11.26
-76,0,"Trades helpers, construction labourers and related occupations",0,0,0.27,-11.64,-1.82,-13.68
-82,0,"Supervisors and technical occupations in natural resources, agriculture and related production",0,0,-2.35,-8.32,-7.99,-16.98
-84,0,"Workers in natural resources, agriculture and related production",0,0,-2.02,-10.22,-3.53,-14.11
-86,1,"Harvesting, landscaping and natural resources labourers",0,0,-8.25,-3.67,-2.08,-5.82
-92,0,"Processing, manufacturing and utilities supervisors and central control operators",0,0,-1.51,-11.13,1.65,-9.3
-94,0,Processing and manufacturing machine operators and related production workers,0.03,0,4.8,-9.46,-7.72,-17.9
-95,1,Assemblers in manufacturing,0,0,-6.89,-2.17,-5.73,-8.02
-96,1,"Labourers in processing, manufacturing and utilities",0,0,6.66,-8.88,-2.41,-11.5
+﻿code,dummy,essential_share,occupation,benchmark,alternative,janfeb20,febmar20,marapr20,febapr20
+1,0,0,Senior management occupations,1,1,-7.53,-14.96,-10.43,-26.96
+506,0,0.13,Specialized middle management occupations,0.89,0.87,1.67,-1.38,-6.47,-7.94
+6,0,0.5,Middle management occupations in retail and wholesale trade and customer services,1,0.45,-0.72,-7.02,-4.96,-12.33
+708,0,0.08,"Middle management occupations in trades, transportation, production and utilities",0.2,0.15,0.14,-6.77,-5.27,-12.39
+11,1,0.25,Professional occupations in business and finance,1,0.89,-0.18,-1.72,-5,-6.8
+12,1,0.25,Administrative and financial supervisors and administrative occupations,1,0.56,0.7,-3.25,-3.45,-6.82
+13,1,0.33,"Finance, insurance and related business administrative occupations",0.8,0.9,1.05,-0.85,-5.48,-6.38
+14,0,0.14,Office support occupations,0.77,0.42,0.52,-4.87,-3.14,-8.17
+15,0,0.75,"Distribution, tracking and scheduling co-ordination occupations",0.22,0.08,-1.41,-10.42,2.7,-7.44
+21,0,0.06,Professional occupations in natural and applied sciences,0.7,0.67,1.89,-5.16,-3.9,-9.26
+22,0,0.05,Technical occupations related to natural and applied sciences,0.38,0.4,0.55,-2.27,-5.32,-7.71
+30,1,1,Professional occupations in nursing,0.5,0.25,0.99,-6.41,-2.98,-9.58
+31,1,0.29,Professional occupations in health (except nursing),0,0.05,0.1,-4.08,-2.66,-6.84
+32,1,0.44,Technical occupations in health,0,0.03,1.51,-4.49,-4.87,-9.58
+34,1,0.67,Assisting occupations in support of health services,0,0,-2.17,-4.53,-6.57,-11.4
+40,0,0,Professional occupations in education services,1,1,-0.14,-3.06,-3.19,-6.35
+41,0,0.14,"Professional occupations in law and social, community and government services",0.82,0.87,-0.95,-4.9,-5.63,-10.81
+42,0,0,"Paraprofessional occupations in legal, social, community and education services",0.33,0.54,-2.25,-6.35,-7.75,-14.58
+43,1,0.75,Occupations in front-line public protection services,0,0,4.89,1.08,-7.2,-6.05
+44,0,0.43,"Care providers and educational, legal and public protection support occupations",0.5,0.17,2.41,-10.23,-0.09,-10.33
+51,0,0,Professional occupations in art and culture,0.33,0.29,5.64,-7.84,4.32,-3.19
+52,0,0,"Technical occupations in art, culture, recreation and sport",0.55,0.36,0,-6.77,-4.53,-11.6
+62,0,0.75,Retail sales supervisors and specialized sales occupations,0.83,0.83,0.05,-6.98,-7.39,-14.89
+63,0,0.24,Service supervisors and specialized service occupations,0.06,0.06,-1.07,-9.41,-5.24,-15.14
+64,0,0.2,Sales representatives and salespersons - wholesale and retail trade,0.5,0.25,-1.27,-6.08,-5.94,-12.38
+65,1,0,Service representatives and other customer and personal services occupations,0.33,0.33,2.24,-5.71,-8.09,-14.26
+66,0,0.89,Sales support occupations,0,0.19,0.61,-12.6,0.81,-11.68
+67,0,0,"Service support and other service occupations, n.e.c.",0,0,2.17,-12.17,-4.62,-17.36
+72,0,0.02,"Industrial, electrical and construction trades",0,0,-0.99,-5.09,-6.98,-12.43
+73,0,0.13,Maintenance and equipment operation trades,0,0,-0.25,-9.05,-7.02,-16.71
+74,0,0,"Other installers, repairers and servicers and material handlers",0,0,1.44,-10.31,-0.11,-10.43
+75,1,0.31,Transport and heavy equipment operation and related maintenance occupations,0,0,2.78,-7.05,-3.93,-11.26
+76,0,0.91,"Trades helpers, construction labourers and related occupations",0,0,0.27,-11.64,-1.82,-13.68
+82,0,0,"Supervisors and technical occupations in natural resources, agriculture and related production",0,0,-2.35,-8.32,-7.99,-16.98
+84,0,0.13,"Workers in natural resources, agriculture and related production",0,0,-2.02,-10.22,-3.53,-14.11
+86,1,0.17,"Harvesting, landscaping and natural resources labourers",0,0,-8.25,-3.67,-2.08,-5.82
+92,0,0.21,"Processing, manufacturing and utilities supervisors and central control operators",0,0,-1.51,-11.13,1.65,-9.3
+94,0,0,Processing and manufacturing machine operators and related production workers,0.03,0,4.8,-9.46,-7.72,-17.9
+95,1,0,Assemblers in manufacturing,0,0,-6.89,-2.17,-5.73,-8.02
+96,1,0,"Labourers in processing, manufacturing and utilities",0,0,6.66,-8.88,-2.41,-11.5

@@ -4,7 +4,7 @@
 
 #2) set your working directory (where the repository is located)
 
-setwd("~/Documents/GitHub/remoteworkdynamics_canada")
+setwd("~/Documents/GitHub/remotework_dynamics_paper")
 
 #3) run the following code (this will run all other R codes)
 

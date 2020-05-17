@@ -297,10 +297,10 @@ gen emp_feb= employee if SURVMNTH==2
 gen emp_mar= employee if SURVMNTH==3
 gen emp_apr= employee if SURVMNTH==4
 collapse(sum) emp_jan emp_feb emp_mar emp_apr, by(NOC_10 NOC_40 NAICS_21 PROV CMA)
-gen empg_janfeb= 100*[(emp_feb-emp_jan)/emp_feb]
-gen empg_febmar= 100*[(emp_mar-emp_feb)/emp_mar]
-gen empg_marapr= 100*[(emp_apr-emp_mar)/emp_apr]
-gen empg_febapr= 100*[(emp_apr-emp_feb)/emp_apr]
+gen empg_janfeb= 100*[(emp_feb-emp_jan)/emp_jan]
+gen empg_febmar= 100*[(emp_mar-emp_feb)/emp_feb]
+gen empg_marapr= 100*[(emp_apr-emp_mar)/emp_mar]
+gen empg_febapr= 100*[(emp_apr-emp_feb)/emp_feb]
 merge m:1 NOC_40 using "../Input/LFS/eis_benchmark_remote_NOC_40.dta"
 drop noc6_2digit noc16_2digit _merge
 merge m:1 NOC_40 using "../Input/LFS/eis_manual_remote_NOC_40.dta"

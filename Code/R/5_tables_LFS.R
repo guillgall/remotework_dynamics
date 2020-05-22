@@ -8,7 +8,7 @@ cities <- read.csv("./Data/Output/remote_work_big_cities.csv")
 industry <- read.csv("./Data/Output/remote_work_industry.csv")
 
 colnames(provinces)[2:3] <- c("Benchmark", "Alternative")
-colnames(cities) <- c("City", "Benchmark", "Alternative")
+colnames(cities) <- c("City", "Benchmark", "Alternative", "National Employment Share")
 colnames(industry)[2:3] <- c("Benchmark", "Alternative")
 
 provinces <- provinces[order(-provinces$Benchmark),]
@@ -28,7 +28,7 @@ print(xtable(provinces,
 print(xtable(cities,
              caption = "Share of jobs that can be done at home, by city (LFS estimates)",
              label = "tab:cities_lfs",
-             align = "clcc"),
+             align = "clccc"),
       sanitize.text.function=function(x){x},
       include.rownames = FALSE,
       type="latex", 
@@ -196,6 +196,19 @@ pdf("./Data/Output/dynamics_10oc_febapr20.pdf")
 g
 dev.off()
 
+g <- ggplot(data=dynamics_10oc, aes(y=marapr20, x=benchmark)) 
+g <- g +  geom_point() + geom_smooth(method=lm, se=FALSE)
+g <- g + geom_text(aes(label=occupation),hjust=0, vjust=0)
+g <- g + theme(axis.text.x = element_text(size=12), axis.text.y = element_text(size=12))
+g <- g + labs(y="Change (%) in Employment", x = "Remote-Work Index")
+g
+
+
+#save file
+pdf("./Data/Output/dynamics_10oc_marapr20.pdf")
+g
+dev.off()
+
 
 #province
 colnames(dynamics_province) <- c("province",
@@ -225,6 +238,18 @@ g
 
 #save file
 pdf("./Data/Output/dynamics_province_febmar20.pdf")
+g
+dev.off()
+
+g <- ggplot(data=dynamics_province, aes(y=marapr20, x=benchmark)) 
+g <- g +  geom_point() + geom_smooth(method=lm, se=FALSE)
+g <- g + geom_text(aes(label=province),hjust=0, vjust=0)
+g <- g + theme(axis.text.x = element_text(size=12), axis.text.y = element_text(size=12))
+g <- g + labs(y="Change (%) in Employment", x = "Remote-Work Index")
+g
+
+#save file
+pdf("./Data/Output/dynamics_province_marapr20.pdf")
 g
 dev.off()
 
@@ -259,6 +284,19 @@ pdf("./Data/Output/dynamics_city_febapr20.pdf")
 g
 dev.off()
 
+g <- ggplot(data=dynamics_city, aes(y=marapr20, x=benchmark)) 
+g <- g +  geom_point() + geom_smooth(method=lm, se=FALSE)
+g <- g + geom_text(aes(label=city),hjust=0, vjust=0)
+g <- g + theme(axis.text.x = element_text(size=12), axis.text.y = element_text(size=12))
+g <- g + labs(y="Change (%) in Employment", x = "Remote-Work Index")
+g
+
+#save file
+pdf("./Data/Output/dynamics_city_marapr20.pdf")
+g
+dev.off()
+
+
 
 
 #industry
@@ -292,6 +330,19 @@ pdf("./Data/Output/dynamics_industry_febapr20.pdf")
 g
 dev.off()
 
+g <- ggplot(data=dynamics_industry, aes(y=marapr20, x=benchmark)) 
+g <- g +  geom_point() + geom_smooth(method=lm, se=FALSE)
+g <- g + geom_text(aes(label=industry),hjust=0, vjust=0)
+g <- g + theme(axis.text.x = element_text(size=12), axis.text.y = element_text(size=12))
+g <- g + labs(y="Change (%) in Employment", x = "Remote-Work Index")
+g
+
+#save file
+pdf("./Data/Output/dynamics_industry_marapr20.pdf")
+g
+dev.off()
+
+
 #############
 #regressions
 
@@ -312,11 +363,18 @@ stargazer(ols1, ols2, ols3, ols4, ols5, ols6, ols7, ols8,
                            "$\\triangle q_{j,Feb,Apr}$"),
           covariate.labels=c("$S_{j} (Benchmark)$",
                              "$D_{j}$"),
+          dep.var.caption="Monthly Percentage Change in Employment",
           label="tab:regression_dynamics_2digit",
           title="Employment Change and Remote Work Index: 2-digit level",
           omit.stat=c("ser", "f"),
           font.size="footnotesize",
+          notes = c("$\\triangle q_{j,t,\\tau}$ is the percentage change in employment between month $t$ and $\\tau$ in occupation $j$,",
+          "$S_{j} (Benchmark)$ is the Remote Work Index and $D_{j}$ is the Essential Service Dummy variable.",
+          "Source: author's calculations."),
+          notes.align = "l",
           out="./Data/Output/regression_dynamics_2digit.tex")
+
+
 
 #alternative index
 ols1 <- lm(janfeb20 ~ alternative, data=dynamics_2digit)

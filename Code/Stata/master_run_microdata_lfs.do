@@ -126,6 +126,10 @@ gen female_share= female/employee
 collapse(mean)telejob_benchmark teljob_manual female_share, by(NOC_40)
 gen NOC_40 = _n
 drop if NOC_40==.
+gen NOC_40 = _n
+recode NOC_40 (1=1)(2=0506)(3=6)(4=0708)(5=11)(6=12)(7=13)(8=14)(9=15)(10=21)(11=22)(12=30)(13=31)(14=32)(15=34)(16=40)(17=41)(18=42)(19=43)(20=44)(21=51)(22=52)(23=62)(24=63)(25=64)(26=65)(27=66)(28=67)(29=72)(30=73)(31=74)(32=75)(33=76)(34=82)(35=84)(36=86)(37=92)(38=94)(39=95)(40=96), gen(NOC)
+recode NOC_40 (11 12 13 30 31 32 34 43 65 75 86 95 96=1), gen(Dummy)
+replace Dummy=0 if Dummy==.
 merge 1:1 NOC_40 using "../Input/LFS/essential_worker_NOC_40.dta"
 drop _merge
 rename telejob_benchmark ShareofJobsBenchmark
@@ -133,7 +137,7 @@ rename teljob_manua ShareofJobsAlternative
 rename NOC_40 NOC
 rename noc16_2digit digit2_occupation
 rename female_share shareoffemale
-order NOC ess_worker digit2_occupation ShareofJobsBenchmark ShareofJobsAlternative shareoffemale
+order NOC Dummy ess_worker digit2_occupation ShareofJobsBenchmark ShareofJobsAlternative shareoffemale
 export delimited NOC ess_worker digit2_occupation ShareofJobsBenchmark ShareofJobsAlternative shareoffemale using "../Output/remote_employment_female_2_digit_occp_with_code.csv", replace
 
 ##remote_worker_characteristics
@@ -320,12 +324,15 @@ clear
 use "../Input/LFS/remote_employment_dynamics.dta"
 collapse(mean) telew_baseline telew_manual empg_janfeb empg_febmar empg_marapr empg_febapr, by(NOC_40)
 gen NOC_40 = _n
+recode NOC_40 (1=1)(2=0506)(3=6)(4=0708)(5=11)(6=12)(7=13)(8=14)(9=15)(10=21)(11=22)(12=30)(13=31)(14=32)(15=34)(16=40)(17=41)(18=42)(19=43)(20=44)(21=51)(22=52)(23=62)(24=63)(25=64)(26=65)(27=66)(28=67)(29=72)(30=73)(31=74)(32=75)(33=76)(34=82)(35=84)(36=86)(37=92)(38=94)(39=95)(40=96), gen(NOC)
+recode NOC_40 (11 12 13 30 31 32 34 43 65 75 86 95 96=1), gen(Dummy)
+replace Dummy=0 if Dummy==.
 merge 1:1 NOC_40 using "../Input/LFS/lmic_essential_workers.dta"
 drop _merge
 rename NOC_40 digit2_occupation
 rename telew_baseline JobsBenchmark
 rename telew_manual JobsAlternative
-export delimited digit2_occupation ess_worker JobsBenchmark JobsAlternative empg_janfeb empg_febmar empg_marapr empg_febapr using "../Output/remote_employment_dynamics_2_digit_occp_with_code.csv", replace
+export delimited digit2_occupation Dummy ess_worker JobsBenchmark JobsAlternative empg_janfeb empg_febmar empg_marapr empg_febapr using "../Output/remote_employment_dynamics_2_digit_occp_with_code.csv", replace
 
 //remote_employment_dynamics_industry_level
 clear

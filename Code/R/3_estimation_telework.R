@@ -27,27 +27,30 @@ geographies <- unique(onetnoc$geography)
 
 i <- geographies[1]
 
-geo_estimates <- as.data.frame(matrix(ncol=5, nrow=1))
+geo_estimates <- as.data.frame(matrix(ncol=7, nrow=1))
 colnames(geo_estimates) <- c("geography", 
                              "estimate_jobs_onet", "estimate_wages_onet",
-                             "estimate_jobs_manual", "estimate_wages_manual")
+                             "estimate_jobs_manual", "estimate_wages_manual",
+                             "total_employment", "total_wages")
 
 for (i in geographies){
   
   temp1 <- subset(onetnoc, geography==get("i"))
   temp2 <- subset(manual, geography==get("i"))
   
-  temp3 <- as.data.frame(matrix(ncol=5, nrow=1))
+  temp3 <- as.data.frame(matrix(ncol=7, nrow=1))
   colnames(temp3) <- c("geography", 
                        "estimate_jobs_onet", "estimate_wages_onet",
-                       "estimate_jobs_manual", "estimate_wages_manual")
+                       "estimate_jobs_manual", "estimate_wages_manual",
+                       "total_employment", "total_wages")
   
   temp3[1,] <- c(get("i"), 
                  sum(temp1$telework_q)/sum(temp1$emp),
                  sum(temp1$telework_p)/sum(temp1$labor_income),
                  sum(temp2$telework_q)/sum(temp2$emp),
-                 sum(temp2$telework_p)/sum(temp2$labor_income)
-                 )
+                 sum(temp2$telework_p)/sum(temp2$labor_income),
+                 sum(temp1$emp),
+                 sum(temp1$mean.income))
   
   geo_estimates <- rbind(geo_estimates, temp3)
   

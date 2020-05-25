@@ -183,30 +183,30 @@ recode job_nature(.=0)
 recode nonimmigrant(.=0)
 
 //Benchmark
-eststo:reg male telew_baseline i.NOC_40
-eststo:reg parttime telew_baseline i.NOC_40
-eststo:reg below_medianwage telew_baseline i.NOC_40
-eststo:reg no_college telew_baseline i.NOC_40
-eststo:reg nonimmigrant telew_baseline i.NOC_40
-eststo:reg less50 telew_baseline i.NOC_40
-eststo:reg single telew_baseline i.NOC_40
-eststo:reg small_farm telew_baseline i.NOC_40
-eststo:reg private telew_baseline i.NOC_40
-eststo:reg job_nature telew_baseline i.NOC_40
+eststo:reg male telew_baseline 
+eststo:reg parttime telew_baseline 
+eststo:reg below_medianwage telew_baseline 
+eststo:reg no_college telew_baseline 
+eststo:reg nonimmigrant telew_baseline 
+eststo:reg less50 telew_baseline 
+eststo:reg single telew_baseline 
+eststo:reg small_farm telew_baseline
+eststo:reg private telew_baseline 
+eststo:reg job_nature telew_baseline 
 asdoc esttab
 eststo clear
 
 //Alternative method
-eststo:reg male telew_manual i.NOC_40
-eststo:reg parttime telew_manual i.NOC_40
-eststo:reg below_medianwage telew_manual i.NOC_40
-eststo:reg no_college telew_manual i.NOC_40
-eststo:reg nonimmigrant telew_manual i.NOC_40
-eststo:reg less50 telew_manual i.NOC_40
-eststo:reg single telew_manual i.NOC_40
-eststo:reg small_farm telew_manual i.NOC_40
-eststo:reg private telew_manual i.NOC_40
-eststo:reg job_nature telew_manual i.NOC_40
+eststo:reg male telew_manual 
+eststo:reg parttime telew_manual
+eststo:reg below_medianwage telew_manual 
+eststo:reg no_college telew_manual 
+eststo:reg nonimmigrant telew_manual 
+eststo:reg less50 telew_manual 
+eststo:reg single telew_manual 
+eststo:reg small_farm telew_manual
+eststo:reg private telew_manual 
+eststo:reg job_nature telew_manual 
 esttab
 eststo clear
 

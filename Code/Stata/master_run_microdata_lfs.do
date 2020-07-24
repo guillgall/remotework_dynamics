@@ -294,50 +294,73 @@ tabstat male female parttime fulltime below_medianwage medianwage no_college col
 ##Employment_losses_by_occupation_industry_province_CMAs
 clear
 use "../Input/LFS/Canadian LFS 2020_jan-apr.dta"
-gen employees=1 if FTPTMAIN>=1
+//remote_employment_dynamics_2_digit_occp_with_code
+gen employed=0
+replace employed=1 if LFSSTAT<=2
 drop if NOC_40==.
-gen emp_jan= employee if SURVMNTH==1
-gen emp_feb= employee if SURVMNTH==2
-gen emp_mar= employee if SURVMNTH==3
-gen emp_apr= employee if SURVMNTH==4
-collapse(sum) emp_jan emp_feb emp_mar emp_apr, by(NOC_10 NOC_40 NAICS_21 PROV CMA)
+gen emp_jan= employed if SURVMNTH==1
+gen emp_feb= employed if SURVMNTH==2
+gen emp_mar= employed if SURVMNTH==3
+gen emp_apr= employed if SURVMNTH==4
+collapse(sum) emp_jan emp_feb emp_mar emp_apr[iweight= FINALWT], by(NOC_40)
 gen empg_janfeb= 100*[(emp_feb-emp_jan)/emp_jan]
 gen empg_febmar= 100*[(emp_mar-emp_feb)/emp_feb]
 gen empg_marapr= 100*[(emp_apr-emp_mar)/emp_mar]
 gen empg_febapr= 100*[(emp_apr-emp_feb)/emp_feb]
 merge m:1 NOC_40 using "../Input/LFS/eis_benchmark_remote_NOC_40.dta"
-drop noc6_2digit noc16_2digit _merge
+drop NOC16_2digit _merge
 merge m:1 NOC_40 using "../Input/LFS/eis_manual_remote_NOC_40.dta"
+drop _merge NOC16_2digit
+merge 1:1 NOC_40 using "../Input/LFS/essential_worker_NOC_40.dta"
 drop _merge
-save "../Input/LFS/remote_employment_dynamics.dta"
+
+recode NOC_40 (1=1)(2=0506)(3=6)(4=0708)(5=11)(6=12)(7=13)(8=14)(9=15)(10=21)(11=22)(12=30)(13=31)(14=32)(15=34)(16=40)(17=41)(18=42)(19=43)(20=44)(21=51)(22=52)(23=62)(24=63)(25=64)(26=65)(27=66)(28=67)(29=72)(30=73)(31=74)(32=75)(33=76)(34=82)(35=84)(36=86)(37=92)(38=94)(39=95)(40=96), gen(NOC)
+
+recode NOC_40 (5 6 7 9 12 13 14 15 19 23 26 27 32 33 36 40=1), gen(dummy)
+replace dummy=0 if dummy==.
+
+rename NOC_40 digit2_occupation
+rename telew_baseline JobsBenchmark
+rename telew_manual JobsAlternative
+rename ess_worker essential_share
+export delimited digit2_occupation Dummy essential_share JobsBenchmark JobsAlternative empg_janfeb empg_febmar empg_marapr empg_febapr using "../Output/remote_employment_dynamics_2_digit_occp_with_code.csv", replace
+
 
 //remote_employment_dynamics_10_occp
 clear
 use "../Input/LFS/remote_employment_dynamics.dta"
-collapse(mean) telew_baseline telew_manual empg_janfeb empg_febmar empg_marapr empg_febapr, by(NOC_10)
-rename telew_baseline JobsBenchmark
-rename telew_manual JobsAlternative
+
+gen employed=0
+replace employed=1 if LFSSTAT<=2
+drop if NOC_10==.
+gen emp_jan= employed if SURVMNTH==1
+gen emp_feb= employed if SURVMNTH==2
+gen emp_mar= employed if SURVMNTH==3
+gen emp_apr= employed if SURVMNTH==4
+collapse(sum) emp_jan emp_feb emp_mar emp_apr[iweight= FINALWT], by(NOC_10)
+gen empg_janfeb= 100*[(emp_feb-emp_jan)/emp_jan]
+gen empg_febmar= 100*[(emp_mar-emp_feb)/emp_feb]
+gen empg_marapr= 100*[(emp_apr-emp_mar)/emp_mar]
+gen empg_febapr= 100*[(emp_apr-emp_feb)/emp_feb]
 export delimited NOC_10 JobsBenchmark JobsAlternative empg_janfeb empg_febmar empg_marapr empg_febapr using "../Output/remote_employment_dynamics_10_occp.csv", replace
 
-//remote_employment_dynamics_2_digit_occp_with_code
-clear
-use "../Input/LFS/remote_employment_dynamics.dta"
-collapse(mean) telew_baseline telew_manual empg_janfeb empg_febmar empg_marapr empg_febapr, by(NOC_40)
-gen NOC_40 = _n
-recode NOC_40 (1=1)(2=0506)(3=6)(4=0708)(5=11)(6=12)(7=13)(8=14)(9=15)(10=21)(11=22)(12=30)(13=31)(14=32)(15=34)(16=40)(17=41)(18=42)(19=43)(20=44)(21=51)(22=52)(23=62)(24=63)(25=64)(26=65)(27=66)(28=67)(29=72)(30=73)(31=74)(32=75)(33=76)(34=82)(35=84)(36=86)(37=92)(38=94)(39=95)(40=96), gen(NOC)
-recode NOC_40 (11 12 13 30 31 32 34 43 65 75 86 95 96=1), gen(Dummy)
-replace Dummy=0 if Dummy==.
-merge 1:1 NOC_40 using "../Input/LFS/lmic_essential_workers.dta"
-drop _merge
-rename NOC_40 digit2_occupation
-rename telew_baseline JobsBenchmark
-rename telew_manual JobsAlternative
-export delimited digit2_occupation Dummy ess_worker JobsBenchmark JobsAlternative empg_janfeb empg_febmar empg_marapr empg_febapr using "../Output/remote_employment_dynamics_2_digit_occp_with_code.csv", replace
 
 //remote_employment_dynamics_industry_level
 clear
 use "../Input/LFS/remote_employment_dynamics.dta"
-collapse(mean) telew_baseline telew_manual empg_janfeb empg_febmar empg_marapr empg_febapr, by(NAICS_21)
+gen employed=0
+replace employed=1 if LFSSTAT<=2
+drop if NAICS_21==.
+
+gen emp_jan= employed if SURVMNTH==1
+gen emp_feb= employed if SURVMNTH==2
+gen emp_mar= employed if SURVMNTH==3
+gen emp_apr= employed if SURVMNTH==4
+collapse(sum) emp_jan emp_feb emp_mar emp_apr[iweight= FINALWT], by(NAICS_21)
+gen empg_janfeb= 100*[(emp_feb-emp_jan)/emp_jan]
+gen empg_febmar= 100*[(emp_mar-emp_feb)/emp_feb]
+gen empg_marapr= 100*[(emp_apr-emp_mar)/emp_mar]
+gen empg_febapr= 100*[(emp_apr-emp_feb)/emp_feb]
 rename NAICS_21 Industrylevel
 rename telew_baseline JobsBenchmark
 rename telew_manual JobsAlternative
@@ -346,16 +369,36 @@ export delimited Industrylevel JobsBenchmark JobsAlternative empg_janfeb empg_fe
 //remote_employment_dynamics_province
 clear 
 use "../Input/LFS/remote_employment_dynamics.dta"
-collapse(mean) telew_baseline telew_manual empg_janfeb empg_febmar empg_marapr empg_febapr, by(PROV)
-rename PROV Province
-rename telew_baseline JobsBenchmark
-rename telew_manual JobsAlternative
+gen employed=0
+replace employed=1 if LFSSTAT<=2
+drop if PROV==.
+gen emp_jan= employed if SURVMNTH==1
+gen emp_feb= employed if SURVMNTH==2
+gen emp_mar= employed if SURVMNTH==3
+gen emp_apr= employed if SURVMNTH==4
+collapse(sum) emp_jan emp_feb emp_mar emp_apr[iweight= FINALWT], by(PROV)
+gen empg_janfeb= 100*[(emp_feb-emp_jan)/emp_jan]
+gen empg_febmar= 100*[(emp_mar-emp_feb)/emp_feb]
+gen empg_marapr= 100*[(emp_apr-emp_mar)/emp_mar]
+gen empg_febapr= 100*[(emp_apr-emp_feb)/emp_feb]
 export delimited Province JobsBenchmark JobsAlternative empg_janfeb empg_febmar empg_marapr empg_febapr using "../Output/remote_employment_dynamics_province.csv", replace
 
 //remote_employment_dynamics_CMAs
 clear 
 use "../Input/LFS/remote_employment_dynamics.dta"
-collapse(mean) telew_baseline telew_manual empg_janfeb empg_febmar empg_marapr empg_febapr, by(CMA)
+gen employed=0
+replace employed=1 if LFSSTAT<=2
+drop if CMA==.
+gen emp_jan= employed if SURVMNTH==1
+gen emp_feb= employed if SURVMNTH==2
+gen emp_mar= employed if SURVMNTH==3
+gen emp_apr= employed if SURVMNTH==4
+collapse(sum) emp_jan emp_feb emp_mar emp_apr[iweight= FINALWT], by(CMA)
+gen empg_janfeb= 100*[(emp_feb-emp_jan)/emp_jan]
+gen empg_febmar= 100*[(emp_mar-emp_feb)/emp_feb]
+gen empg_marapr= 100*[(emp_apr-emp_mar)/emp_mar]
+gen empg_febapr= 100*[(emp_apr-emp_feb)/emp_feb]
+
 rename CMA Nine_CMAs
 rename telew_baseline JobsBenchmark
 rename telew_manual JobsAlternative

@@ -1,5 +1,6 @@
 library(xtable)
 library(ggplot2)
+library(ggrepel)
 
 #open data
 estimates <- read.csv("./Data/Output/telework_estimates.csv")
@@ -28,6 +29,7 @@ print(xtable(canada[,2:3],
       type="latex", 
       caption.placement = "top",
       file="./Data/Output/table_canada.tex")
+
 
 #cities
 
@@ -142,6 +144,7 @@ print(xtable(provincial[,1:3],
       file="./Data/Output/table_provinces.tex")
 
 
+
 #territories
 
 territory <- subset(estimates, territory==1)
@@ -158,11 +161,13 @@ print(xtable(territory[,1:3],
       caption.placement = "top",
       file="./Data/Output/table_territory.tex")
 
+
 ##
 #plots
 g <- ggplot(data=provincial, aes(y=provincial[,2], x=provincial[,3])) 
-g <- g +  geom_point() + geom_smooth(method=lm, se=FALSE)
-g <- g + geom_text(aes(label=Province),hjust=0, vjust=0)
+g <- g +  geom_point() + geom_smooth(method=lm, colour="black", se=FALSE)
+g <- g + geom_text_repel(aes(label=Province),hjust=0, vjust=0)
+g <- g + theme_bw()
 g <- g + theme(axis.text.x = element_text(size=12), axis.text.y = element_text(size=12))
 g <- g + labs(y="Unweighted", x = "Weighted by Wages")
 g
@@ -173,8 +178,9 @@ g
 dev.off()
 
 g <- ggplot(data=cities, aes(y=cities[,2], x=cities[,3])) 
-g <- g +  geom_point() + geom_smooth(method=lm, se=FALSE)
-g <- g + geom_text(aes(label=City),hjust=0, vjust=0)
+g <- g +  geom_point() + geom_smooth(method=lm, colour="black", se=FALSE)
+#g <- g + geom_text(aes(label=City),hjust=0, vjust=0)
+g <- g + theme_bw()
 g <- g + theme(axis.text.x = element_text(size=12), axis.text.y = element_text(size=12))
 g <- g + labs(y="Unweighted", x = "Weighted by Wages")
 g
@@ -198,8 +204,9 @@ g
 
 ##ROBUSTNESS: compare indices
 g <- ggplot(data=provincial, aes(y=provincial[,2], x=provincial[,4])) 
-g <- g +  geom_point() + geom_smooth(method=lm, se=FALSE)
-g <- g + geom_text(aes(label=Province),hjust=0, vjust=0)
+g <- g +  geom_point() + geom_smooth(method=lm, colour="black", se=FALSE)
+g <- g + geom_text_repel(aes(label=Province),hjust=0, vjust=0)
+g <- g + theme_bw()
 g <- g + theme(axis.text.x = element_text(size=12), axis.text.y = element_text(size=12))
 g <- g + labs(y="Benchmark", x = "Alternative")
 g
@@ -210,8 +217,8 @@ g
 dev.off()
 
 g <- ggplot(data=cities, aes(y=cities[,2], x=cities[,4])) 
-g <- g +  geom_point() + geom_smooth(method=lm, se=FALSE)
-g <- g + geom_text(aes(label=City),hjust=0, vjust=0)
+g <- g +  geom_point() + geom_smooth(method=lm, colour="black", se=FALSE)
+#g <- g + geom_text(aes(label=City),hjust=0, vjust=0)
 g <- g + theme(axis.text.x = element_text(size=12), axis.text.y = element_text(size=12))
 g <- g + labs(y="Benchmark", x = "Alternative")
 g
@@ -249,15 +256,15 @@ print(xtable(compare,
       file="./Data/Output/remote_work_index_comparison.tex")
 
 
-
 #cities: share and size
 cities_large <- cities
 cities_large <- cities_large[-c(grep("Ontario part", cities_large$City),
                                 grep("Quebec part", cities_large$City)),]
 
 g <- ggplot(data=cities_large, aes(y=Unweighted, x=Employment/1000000)) 
-g <- g +  geom_point() + geom_smooth(method=lm, se=FALSE ,formula=y~log(x))
-g <- g + geom_text(aes(label=City),hjust=0, vjust=0)
+g <- g +  geom_point() + geom_smooth(method=lm, colour="black", se=FALSE , formula=y~log(x))
+#g <- g + geom_text(aes(label=City),hjust=0, vjust=0)
+g <- g + theme_bw()
 g <- g + theme(axis.text.x = element_text(size=12), axis.text.y = element_text(size=12))
 g <- g + labs(y="Remote Work Index", x = "Employment (millions)")
 g

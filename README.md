@@ -1,4 +1,4 @@
-This repository contains the code and data for the paper "[Remote Work and Employment Dynamics under Covid-19: Evidence from Canada](https://guillgall.github.io/files/remotework_dynamics.pdf)" by Guillermo Gallacher and Iqbal Hossain.
+This repository contains the code and data for the paper "[Remote Work and Employment Dynamics under COVID-19: Evidence from Canada](https://utpjournals.press/doi/10.3138/cpp.2020-026)" by Guillermo Gallacher and Iqbal Hossain.
 
 ## Results
 

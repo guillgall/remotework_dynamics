@@ -1,5 +1,3 @@
-library(reshape2)
-
 #open data
 lfs <- read.csv("~/Desktop/Data/LFS/lfs_17_21.csv")
 
@@ -26,9 +24,6 @@ lfs$job_nature <- as.numeric(lfs$PERMTEMP>1)
 lfs$wage <- lfs$HRLYEARN*lfs$UHRSMAIN
 median_wage <- median(lfs$wage, na.rm=TRUE)
 lfs$below_median_wage <- as.numeric(lfs$wage < median_wage)
-
-#check
-summary(lfs$below_median_wage)
 
 #REGRESSIONS
 
@@ -100,11 +95,11 @@ lfs2 <- lfs
 lfs2 <- lfs2[order(lfs2$wage),]
 lfs2 <- lfs2[!is.na(lfs2$wage),]
 
-lfs2$percentile <- as.numeric(cut_number(lfs2$wage, 10))
+lfs2$decile <- as.numeric(cut_number(lfs2$wage, 10))
 
 lfs2 <- lfs2[,c(63,64,78)]
 
-lfs_ag <- aggregate(lfs2[,c(1:3)], by=list(lfs2$percentile), FUN=mean)
+lfs_ag <- aggregate(lfs2[,c(1:3)], by=list(lfs2$decile), FUN=mean)
 
 #save files
 write.csv(lfs_ag, file = "./Data/Output/income_decile_remote_work.csv")

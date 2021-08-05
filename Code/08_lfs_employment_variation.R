@@ -1,5 +1,3 @@
-library(reshape2)
-
 #open data
 lfs <- read.csv("~/Desktop/Data/LFS/lfs_17_21.csv")
 

@@ -113,10 +113,10 @@ cities_ag["Rural","Unweighted"] <- (canada[1,"remote_work_job"]-cities_ag["Urban
 cities_ag["Rural","Weighted by Wages"] <- (canada[1,"remote_work_wages"]-cities_ag["Urban","remote_work_wages"])/cities_ag["Rural","Wages"]
 
 #rural estimate:
-cities_ag["Rural","Unweighted"] 
+round(cities_ag["Rural","Unweighted"],3) 
 #rural employment share (fraction of total)
 cities_ag$'National Employment Share' <- cities_ag$Employment/canada[1,"Employment"]
-cities_ag["Rural","National Employment Share"]
+round(cities_ag["Rural","National Employment Share"],2)
 
 #note: something strange with wages of urban vs canada total? need for rural computation
 
@@ -174,5 +174,54 @@ pdf("./Data/Output/cities_share_size.pdf")
 g
 dev.off()
 
+##TABLE A1: Comparison of the Benchmark Remote Work
+#Index and the Alternative Remote Work Index
 
+#open datasets
+onetnoc <- read.csv("./Data/Output/eis_onetnoc_remote.csv")
+manual <- read.csv("./Data/Output/eis_manual_remote.csv")
 
+onetnoc <- subset(onetnoc, geography=="Canada [1]")
+manual <- subset(manual, geography=="Canada [1]")
+
+onetnoc <- onetnoc[,c(4,10)]
+manual <- manual[,c(4,14)]
+
+merge <- merge(onetnoc, manual, by=c("occupation"))
+
+colnames(merge) <- c("Occupation", "Benchmark", "Alternative")
+
+merge$diff <- abs(merge$Benchmark - merge$Alternative)
+
+merge <- merge[order(-merge$diff),]
+
+large_diff <- subset(merge, diff==1)
+
+large_diff <- large_diff[order(-large_diff$Benchmark),]
+
+large_diff[,2:3] <- round(large_diff[,2:3],0)
+
+print(xtable(large_diff[,1:3],
+             caption = "Comparison of the Benchmark Remote Work
+Index and the Alternative Remote Work Index",
+             label = "tab:tablea1",
+             align = "llcc"),
+      sanitize.text.function=function(x){x},
+      include.rownames = FALSE,
+      type="latex", 
+      caption.placement = "top",
+      file="./Data/Output/table_comparison_a1.tex")
+
+##ROBUSTNESS: compare indices
+g <- ggplot(data=provincial, aes(y=provincial[,2], x=provincial[,4])) 
+g <- g +  geom_point() + geom_smooth(method=lm, colour="black", se=FALSE)
+g <- g + geom_text_repel(aes(label=Province),hjust=0, vjust=0)
+g <- g + theme_bw()
+g <- g + theme(axis.text.x = element_text(size=12), axis.text.y = element_text(size=12))
+g <- g + labs(y="Benchmark", x = "Alternative")
+g
+
+#save file
+pdf("./Data/Output/jobs_provinces_comparison_robustness.pdf")
+g
+dev.off()

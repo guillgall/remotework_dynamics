@@ -1,6 +1,3 @@
-
-
-
 #ESSENTIAL SERVICE
 ##add essential service variable
 essential <- read.csv("./Data/Input/LMIC/lmic_essential_workers.csv")

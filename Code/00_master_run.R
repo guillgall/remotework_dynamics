@@ -6,6 +6,8 @@ library(ggplot2)
 library(readxl)
 library(xtable)
 library(stargazer)
+library(reshape2)
+library(ggrepel)
 
 ##2) set your working directory (where the repository is located)
 

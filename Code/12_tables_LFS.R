@@ -202,6 +202,8 @@ industry <- read.csv("./Data/Output/NAICS_21_remote_work.csv")
 industry <- industry[,c(5,3,4)]
 colnames(industry) <- c("Industry", "Benchmark", "Alternative")
 
+industry <- industry[order(-industry$Benchmark),]
+
 print(xtable(industry,
              caption = "Share of jobs that can be done at home, by industry (LFS estimates)",
              label = "tab:industry_lfs",
@@ -554,7 +556,7 @@ dev.off()
 
 remote_dec <- read.csv("./Data/Output/income_decile_remote_work.csv")
 
-g <- ggplot(data=remote_dec, aes(y=remote_work_onet, x=percentile)) 
+g <- ggplot(data=remote_dec, aes(y=remote_work_onet, x=decile)) 
 g <- g +  geom_point() + geom_smooth(colour="black")
 g <- g + theme(axis.text.x = element_text(size=12), axis.text.y = element_text(size=12))
 g <- g + theme_bw()
@@ -567,4 +569,41 @@ pdf("./Data/Output/remote_income_decile.pdf")
 g
 dev.off()
 
+###
+#LFS remote work estimates
+
+#open data
+provinces <- read.csv("./Data/Output/PROV_remote_work.csv")
+cities <- read.csv("./Data/Output/CMA_remote_work.csv")
+
+provinces <- provinces[,c(5,3,4)]
+cities <- cities[,c(5,3,4)]
+
+colnames(provinces) <- c("Provinces", "Benchmark", "Alternative")
+colnames(cities) <- c("City", "Benchmark", "Alternative")
+
+#industry <- industry[order(-industry$Benchmark),]
+provinces <- provinces[order(-provinces$Benchmark),]
+cities <- cities[order(-cities$Benchmark),]
+
+print(xtable(provinces,
+             caption = "Share of jobs that can be done at home, by province (LFS estimates)",
+             label = "tab:provinces_lfs",
+             align = "clcc"),
+      sanitize.text.function=function(x){x},
+      include.rownames = FALSE,
+      type="latex", 
+      caption.placement = "top",
+      file="./Data/Output/table_provinces_lfs.tex")
+
+
+print(xtable(cities,
+             caption = "Share of jobs that can be done at home, by city (LFS estimates)",
+             label = "tab:cities_lfs",
+             align = "clcc"),
+      sanitize.text.function=function(x){x},
+      include.rownames = FALSE,
+      type="latex", 
+      caption.placement = "top",
+      file="./Data/Output/table_cities_lfs.tex")
 

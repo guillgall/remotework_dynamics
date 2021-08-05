@@ -18,19 +18,13 @@ eis <- eis[-c(grep("0105", eis$noc_code),
 geo <- unique(eis$geography)
 25500/51
 
-##MANUAL DATA (FROM IES?)
+##MANUAL DATA 
 manual <- read.csv("./Data/Input/Manual/manualnoc.csv")
 
 #separate code from name
 manual$noc_code <- gsub("[^0-9]", "",  manual[,2])
 
 setdiff(eis$noc_code, manual$noc_code)
-
-#before I changes file on May 27, 2021, 4pm BA
-#5125: Translators, terminologists and interpreters
-#Why not in manual file? Shelley's email is correct
-
-#Now: OK
 
 #compute average of both introspection
 for (i in 1:nrow(manual)){
@@ -48,21 +42,17 @@ write.csv(eis_manual, file = "./Data/Output/eis_manual_remote.csv")
 biie <- read.csv("./Data/Input/BIIE/onetnoc.csv")
 biie <- as.data.frame(biie[,-1])
 
-#ONET remote work index from DN 
+##ONET remote work index from DN 
 dn <- read.csv("./Data/Input/DN/occupations_workathome.csv")
 colnames(dn)[1] <- "onet"
 
 #merge by onet code
 biie_dn <- merge(biie, dn, by="onet")
 
-#biie has 1038-922=116 occupations more than DN/ONET...
+#biie has 1038-968=70 occupations more than DN/ONET...
 
 #separate noc code
 biie_dn$noc_code <- gsub("[^0-9]", "",  biie_dn$noc_title)
-
-#in previous script I deleted duplicates, but I should of really aggregated...
-#since at NOC level they might have different remote work index
-#example: NOC code 0422, 0731, etc.
 
 biie_dn_ag_noc <- biie_dn[,c(6,5)]
 

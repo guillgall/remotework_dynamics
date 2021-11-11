@@ -1,6 +1,7 @@
 ##4 steps
 
-##1) install packages ggplot2, readxl, xtable, stargazer
+##1) install the following packages and then open: 
+#to install: install.packages("ggplot2"), etc
 
 library(ggplot2)
 library(readxl)
